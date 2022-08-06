@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Julian",
+    "message": "Hola",
+    "socket_id": "PvlElXNTWMYcjha8AAAJ",
+    "likes": 6,
+    "date": 1659821971631,
+    "id": 1
+  },
+  {
+    "name": "Jeniffer",
+    "message": "Hello",
+    "socket_id": "fR2zuAfIEp3wwaSeAAAF",
+    "likes": 2,
+    "date": 1659821985343,
+    "id": 2
+  },
+  {
+    "name": "Juan",
+    "message": "Aja!",
+    "socket_id": "Sbcw-eR-7zoisxnwAAAH",
+    "likes": 3,
+    "date": 1659822598168,
+    "id": 3
+  }
+]

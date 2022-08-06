@@ -6,8 +6,17 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 const httpServer = new HTTPServer(app); // es un wrapper que sirve como listener de eventos
 const socketServer = new SocketServer(httpServer);
+const events = require("./socket_events");
+const Container = require("./utils/container");
 
-const messages = []
+const container = new Container("./data.json");
+
+
+const messages = container.getAll();
+// const messages = []
+
+
+
 
 // app.use("/public", express.static("public"))
 app.use(express.static("public"))
@@ -20,14 +29,27 @@ app.get("/", (req,res) => {
 socketServer.on("connection", socket => {
     console.log('Nuevo cliente conectado'); //se muestra en el server
 
-    socketServer.emit("INIT", messages); // Envia los mensajes cuando un cliente se conecta por primera vez
+    socketServer.emit(events.UPDATE_MESSAGES , messages); // Envia los mensajes cuando un cliente se conecta por primera vez
 
     // Listen sockets from the client
-    socket.on("POST_MESSAGE", msg => {
-        const _msg = {...msg, id: socket.id}
-        messages.push(_msg);
+    socket.on(events.POST_MESSAGE, msg => {
+        const _msg = {
+            ...msg,
+            socket_id: socket.id,
+            likes:0,
+            date: Date.now()
+        }
+        container.save(_msg)
+        // messages.push(_msg);
         console.log(_msg);
-        socketServer.sockets.emit("NEW_MESSAGE", _msg) //para emitir a todos los clientes conectados
+        socketServer.sockets.emit(events.NEW_MESSAGE, _msg) //para emitir a todos los clientes conectados
+    })
+
+    socket.on(events.LIKE_MESSAGE, (msgID) => {
+        const msg = container.getById(msgID);
+        msg.likes++;
+        container.updateById(msgID, msg);
+        socketServer.sockets.emit(events.UPDATE_MESSAGES, container.getAll())
     })
 })
 
