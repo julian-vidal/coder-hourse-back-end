@@ -1,0 +1,36 @@
+<!-- html 
+    head 
+        title="Hello"
+    body 
+        h1(style={color: 'blue'})=title
+        meter(value=level min=min max=max) -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="container">
+        <header>
+            <%- include('../partials/header') %> 
+        </header>
+        <main>
+            <div class="jumbotron">
+                <h1><%- title %> </h1>
+                <p>Welcome</p>
+            </div>
+
+            <span><%= min %>  </span>
+            <meter value=<%= level %> min=<%= min %> max=<%= max %>  >
+
+            </meter> 
+            <span><%= max %>  </span>
+
+        </main>
+
+        <footer>
+            <%- include('../partials/footer') %> 
+        </footer>
+    </body>
+
+</html>

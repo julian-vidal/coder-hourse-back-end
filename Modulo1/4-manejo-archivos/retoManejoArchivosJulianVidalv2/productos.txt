@@ -1,0 +1,1 @@
+[{"title":"Blazer","price":200,"thumbnail":"https://via.placeholder.com/500","id":1}]

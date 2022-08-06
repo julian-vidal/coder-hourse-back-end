@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handelbars</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+    <script>
+        const templateString = `
+        <h1>Datos Personales</h1>
+        <ul>
+            <li>{{nombre}}</li>
+            <li>{{apellido}}</li>
+            <li>{{edad}}</li>
+            <li>{{email}}</li>
+            <li>{{telefono}}</li>
+        </ul>
+        <h2>Comentarios</h2>
+        {{#if comments}}
+            <ul>
+                {{#each comments}}
+                    <li>{{this.user}}: {{this.text}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+
+        `;
+
+        const template = Handlebars.compile(templateString);
+
+        const user = {
+            nombre: "Julian",
+            apellido: "David",
+            edad: 25,
+            email: "julian.vidal123@gmail.com",
+            telefono: "123456",
+            comments: [
+                {
+                    text:"Buen trabajo",
+                    user: "jdayana7"
+                },
+                {
+                    text: "Bien hecho",
+                    user: "juanv2003"
+                }
+            ]
+        }
+
+        const html = template(user);
+
+        document.querySelector('#root').innerHTML = html;
+
+
+
+    </script>
+    
+</body>
+</html>

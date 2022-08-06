@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+
+</head>
+<body>
+    
+
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="eight wide column">
+                <div class="ui container">
+                    <h1>Messages</h1>
+                    <div id="posts"></div>
+                </div>
+            </div> <!-- // column wide eight -->
+
+            <div class="eight wide column">
+                <div class="card">
+                    <div class="ui container">
+                        <h1>Send message</h1>
+                        <div class="ui form">
+                            <div class="field">
+                                <input type="text" name="name" id="name" placeholder="Name*" required>
+                            </div> <!-- // field -->
+
+                            <div class="field">
+                                <textarea name="message" id="message" required></textarea>
+                            </div> <!-- // field -->
+
+                            <div class="field">
+                                <button class="ui primary button" onclick="enviarMsj()">
+                                    <i class="send icon"></i>
+                                    Send message 
+                                </button>
+                            </div> <!-- // field -->
+                        </div> <!-- // ui form -->
+                    </div> <!-- // ui container -->
+
+                    
+                </div> <!-- // card -->
+            </div><!-- // column wide eight -->
+        </div> <!-- // ui grid -->
+
+
+    </div>  <!-- //ui container -->
+
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+    
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+</html>

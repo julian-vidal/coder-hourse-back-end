@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload 1 file</h1>
+    <form action="/uploadFile" enctype="multipart/form-data" method="POST">
+        <input type="file" name="myFile" />
+        <input type="submit" value="Upload file"/>
+    </form>
+
+    <h1>Upload multiple files</h1>
+    <form action="/uploadmultiple" enctype="multipart/form-data" method="post">
+        Select multiple files: <input type="file" name="myFiles" multiple>
+        <input type="submit" value="Upload files">
+    </form>
+</body>
+</html>
