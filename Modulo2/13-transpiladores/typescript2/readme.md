@@ -1,0 +1,8 @@
+- `./node_modules/.bin/tsc --init` generates the  *tsconfig.json* file
+- At the *package.json* file:
+  - `build` and `watch` scripts were defined 
+  - We added `"type": "module"` to the pac
+- At the *tsconfig.json* file:
+  - We un-comment and set the  `"rootDir": "./src"`
+  - We un-comment and set the `"outDir": "./dist"`
+  - We chnaged `"module": "CommonJS"` to `"module": "ES6"`
