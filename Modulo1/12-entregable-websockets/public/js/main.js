@@ -16,21 +16,28 @@ socket.on("NEW_MESSAGE", msg => {
 
 
 const appendMessage = msg => {
+
+    let {email,date,message} = msg;
+
+    date = new Date(date).toLocaleString();
+
     document.getElementById("chat").innerHTML += `
         <div>
-            [${msg.date}] ${msg.email}: ${msg.message} 
+        <b>[${date}] ${email}:</b> ${message} 
         </div>
     `
+
+    
 }
 
 const sendMessage = () => {
-    const name = document.getElementById("name");
-    const message = document.getElementById("message").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message");
 
     socket.emit("POST_MESSAGE", {
-        name: name.value,
-        message
+        email,
+        message: message.value
     })
 
-    name.value="";
+    message.value="";
 }

@@ -4,11 +4,7 @@ const app = express();
 const PORT = 8080;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-server = app.listen(PORT, () => {
-    console.log(`Server is listening at port ${PORT}`);
-})
-server.on("error", err => console.log())
-app.use(express.static("public"))
+app.use('/public', express.static("public"))
 
 // Websocket
 const {Server: HTTPServer} = require('http')
@@ -16,6 +12,10 @@ const {Server: SocketServer} = require('socket.io');
 const httpServer = new HTTPServer(app);
 const socketServer = new SocketServer(httpServer);
 const events = require("./utils/socket_events");
+
+httpServer.listen(PORT, () => {
+    console.log(`Server is listening at port ${PORT}`);
+})
 
 
 // Handlebars setup
@@ -29,7 +29,6 @@ const hbs = handlebars.create({
 
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
-// app.set("views", "./views");
 
 
 
@@ -57,16 +56,14 @@ const messages = [];
 
 socketServer.on("connection", socket =>{
     console.log("New client connected");
-    socketServer.emit(events.NEW_MESSAGE, messages);
+    socketServer.emit(events.UPDATE_MESSAGES, messages);
 
 
     socket.on(events.POST_MESSAGE, msg => {
-        // const _msg = {
-        //     ...msg,
-        //     date
-        // }
         msg.date = Date.now();
-        console.log(msg);
+        messages.push(msg);
+        console.log(`msg: ${msg}`);
+
         socketServer.sockets.emit(events.UPDATE_MESSAGES, messages)
     })
 })
