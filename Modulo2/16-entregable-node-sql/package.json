@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "migrate products": "npx knex migrate:up 20220820163422_products.js",
-    "migrate chats": "npx knex migrate:up 20220820175356_chat_db.js --knexfile=knexfile-sqlite3.js",
-    "seed": "npx knex seed:run"
+    "migrate-products": "npx knex migrate:up 20220820163422_products.js",
+    "seed-products": "npx knex seed:run --specific=products.js",
+    "migrate-chats": "npx knex migrate:up 20220820175356_chat_db.js --knexfile=knexfile-sqlite3.js",
+    "seed-chats": "npx knex seed:run --specific=chats.js --knexfile=knexfile-sqlite3.js"
   },
   "keywords": [],
   "author": "",
