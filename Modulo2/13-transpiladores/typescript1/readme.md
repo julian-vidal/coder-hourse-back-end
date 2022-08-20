@@ -1,0 +1,1 @@
+- A new script `build` was added at the `package.json` file

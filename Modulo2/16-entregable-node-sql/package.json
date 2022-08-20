@@ -1,0 +1,27 @@
+{
+  "name": "entregablejulianvidal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "migrate products": "npx knex migrate:up 20220820163422_products.js",
+    "migrate chats": "npx knex migrate:up 20220820175356_chat_db.js --knexfile=knexfile-sqlite3.js",
+    "seed": "npx knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "knex": "^2.2.0",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

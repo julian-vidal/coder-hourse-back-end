@@ -1,7 +1,7 @@
 const express = require('express');
 const {Server: HTTPServer} = require('http'); // se importa la clase server y se renombra a HTTPServer, esto se hacer porque socket.io tiene una clase llamada Server
 const {Server: SocketServer} = require('socket.io'); // Se importa la clase server y se renombra a SocketServer
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
 const app = express();
 const httpServer = new HTTPServer(app); // es un wrapper que sirve como listener de eventos
