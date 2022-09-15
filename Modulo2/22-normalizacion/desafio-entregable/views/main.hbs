@@ -1,0 +1,87 @@
+ <section class="row bg-light p-3 mb-5">
+    <div class="col">
+        <h1>Products</h1>
+       <h4>Add a new product</h4>
+
+        <form action="/productos" method="post" class="mb-5">
+            
+            <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
+            
+            <input type="number" name="price" class="form-control mb-3" placeholder="Price" required >
+
+            <input type="url" name="image" placeholder="URL of the image" class="form-control mb-3" required>
+                        
+            <input type="submit" value="Add product" class="btn btn-primary">
+        </form>
+
+        <h4>Product List</h4>
+
+        {{#if products}}
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <td scope="row">{{this.name}}</th>
+                        <td>${{this.price}}</td>
+                        <td><img src={{this.image}} alt={{this.name}} style="width:50px; height:50px; object-fill:cover" /> </td>
+                    </tr>
+                    {{/each}}
+                
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {{else}}
+            <div class="alert alert-warning" role="alert">
+                No data was found
+            </div>
+        
+        {{/if}}
+
+
+
+    </div>
+</section>
+
+
+<section class="row bg-light p-3">
+    <div class="col">
+        <h1>Chat</h1>
+    
+        <div>
+            <input type="email" id="email" class="form-control mb-3" placeholder="E-mail*" required>
+
+            <input type="text" id="firstName" class="form-control mb-3" placeholder="First Name*" required>
+            
+            <input type="text" id="lastName" class="form-control mb-3" placeholder="Last Name*" required>
+
+            <input type="number" id="age" class="form-control mb-3" placeholder="Age*" required>
+
+            <input type="text" id="alias" class="form-control mb-3" placeholder="Alias*" required>
+
+            <input type="url" id="avatar" class="form-control mb-3" placeholder="Avatar*" required>
+            
+            <input type="text" id="message" class="form-control mb-3" placeholder="Message*" required>
+
+            <button class="btn btn-primary mb-3" onclick="sendMessage()" id="chatButton" disabled>Send message</button>
+            
+        
+        </div>
+
+        <div id="chat"></div>
+
+    </div>
+</section>
+
+
+
