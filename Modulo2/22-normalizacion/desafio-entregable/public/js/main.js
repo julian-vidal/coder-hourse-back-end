@@ -1,12 +1,24 @@
 const socket = io();
 
+
 socket.on("connect", () => {
     console.log("Connected to the server")
 })
 
-socket.on("UPDATE_MESSAGES", allMessages => {
+socket.on("UPDATE_MESSAGES", (entities, messagesArray) => {
+    
+    const authorSchema = new normalizr.schema.Entity("author", {}, {idAttribute: "email"})
+    const messageSchema = new normalizr.schema.Entity("messages", {
+        author: authorSchema
+    })
+
+    const denormalized = normalizr.denormalize(Object.keys(entities.messages), messagesArray, entities)
+    console.log(denormalized)
+
+
+
     document.getElementById("chat").innerHTML = "";
-    allMessages.map(msg => appendMessage(msg))
+    // allMessages.map(msg => appendMessage(msg))
     // console.log(`message: ${allMessages}`)
 })
 

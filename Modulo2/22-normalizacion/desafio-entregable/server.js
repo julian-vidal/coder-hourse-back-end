@@ -51,12 +51,7 @@ const chatsDB = knex(knexConfigSQLite3);
 const chatTable = "chats";
 
 
-// Normalizr
-const {normalize, schema} = require("normalizr");
-const authorSchema = new schema.Entity("author", {})
-const messageSchema = new schema.Entity("messages", {
-    author: authorSchema
-})
+
 
 
 
@@ -69,13 +64,29 @@ socketServer.on("connection", async socket =>{
     messages = await messages.json()
 
     // console.log(`message type: typeof ${messages}`)
-    console.log(messages)
-    // const normalizedData = normalize(messages)
-    // console.log(`typeof messages: ${messages} `)
-    // console.log(`keys of messages: ${Object.keys(messages)} `)
-    // console.log(`keys of messages: ${Object.keys(messages[0])} `) 
     // console.log(messages)
-    socketServer.emit(events.UPDATE_MESSAGES, messages);
+
+
+    // Normalizr
+    const {normalize, schema} = require("normalizr");
+    const authorSchema = new schema.Entity("author", {}, {idAttribute: "email"})
+    const messageSchema = new schema.Entity("messages", {
+        author: authorSchema
+    })
+
+    const messagesArray = new schema.Array(messageSchema);
+    const normalized = normalize(messages, messagesArray);
+
+    console.log(normalized)
+    
+    // We just need to send "entities" to the client
+    const {entities} = normalized
+
+    
+
+    
+    // socketServer.emit(events.UPDATE_MESSAGES, messages);
+    socketServer.emit(events.UPDATE_MESSAGES, entities, messagesArray);
 
 
     socket.on(events.POST_MESSAGE, async msg => {
