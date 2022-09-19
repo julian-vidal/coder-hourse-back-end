@@ -5,12 +5,14 @@ socket.on("connect", () => {
     console.log("Connected to the server")
 })
 
-socket.on("UPDATE_MESSAGES", (entities, messagesArray) => {
+socket.on("UPDATE_MESSAGES", entities => {
     
     const authorSchema = new normalizr.schema.Entity("author", {}, {idAttribute: "email"})
     const messageSchema = new normalizr.schema.Entity("messages", {
         author: authorSchema
     })
+
+    const messagesArray = new normalizr.schema.Array(messageSchema);
 
     const denormalized = normalizr.denormalize(Object.keys(entities.messages), messagesArray, entities)
     console.log(denormalized)
@@ -18,7 +20,7 @@ socket.on("UPDATE_MESSAGES", (entities, messagesArray) => {
 
 
     document.getElementById("chat").innerHTML = "";
-    // allMessages.map(msg => appendMessage(msg))
+    denormalized.map(msg => appendMessage(msg))
     // console.log(`message: ${allMessages}`)
 })
 
@@ -29,14 +31,14 @@ socket.on("NEW_MESSAGE", msg => {
 
 
 const appendMessage = msg => {
-
-    let {email,date,message} = msg;
+    let {email, avatar} = msg.author;
+    let {date, text} = msg;
 
     date = new Date(date).toLocaleString();
 
     document.getElementById("chat").innerHTML += `
         <div>
-        <b>[${date}] ${email}:</b> ${message} 
+        <b>[${date}] ${email}:</b> ${text} <img src=${avatar} class="img-thumbnail rounded-circle" style="max-width: 80px">
         </div>
     `
 

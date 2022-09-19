@@ -1,7 +1,11 @@
-
+const dotenv = require("dotenv")
 const firebase = require("firebase-admin");
 
+dotenv.config()
+
 const serviceAccount = require("./coderhouse-chat-entregable22-firebase-adminsdk-35zw0-1cf6e86f06.json");
+
+serviceAccount.private_key_id = process.env.private_key_id
 
 firebase.initializeApp({
   credential: firebase.credential.cert(serviceAccount)
@@ -15,7 +19,10 @@ const getAllMessages = async () => {
     const querySnapshot = await messages.get();
     const docs =  querySnapshot.docs;
     const result = docs.map(doc => {
-      return doc.data()
+      let message = doc.data();
+      message.id = doc.id ;
+      message.date = message.date.toDate()
+      return message
     })
 
     return result

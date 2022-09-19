@@ -81,12 +81,9 @@ socketServer.on("connection", async socket =>{
     
     // We just need to send "entities" to the client
     const {entities} = normalized
-
-    
-
     
     // socketServer.emit(events.UPDATE_MESSAGES, messages);
-    socketServer.emit(events.UPDATE_MESSAGES, entities, messagesArray);
+    socketServer.emit(events.UPDATE_MESSAGES, entities);
 
 
     socket.on(events.POST_MESSAGE, async msg => {
