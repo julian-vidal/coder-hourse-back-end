@@ -46,9 +46,7 @@ app.set("view engine", "hbs");
 
 // Knex
 const knex = require('knex');
-const knexConfigSQLite3 = require('./knexfile-sqlite3');
-const chatsDB = knex(knexConfigSQLite3);
-const chatTable = "chats";
+
 
 
 
@@ -82,7 +80,6 @@ socketServer.on("connection", async socket =>{
     // We just need to send "entities" to the client
     const {entities} = normalized
     
-    // socketServer.emit(events.UPDATE_MESSAGES, messages);
     socketServer.emit(events.UPDATE_MESSAGES, entities);
 
 

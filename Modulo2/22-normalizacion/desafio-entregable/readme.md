@@ -12,6 +12,4 @@ DATABASE_NAME=products_db
 ```
 3. `npm run migrate-products`
 4. `npm run seed-products`
-5. `npm run migrate-chats`
-6. `npm run seed-chats`
-7. `npm run dev`
+5. `npm run dev`

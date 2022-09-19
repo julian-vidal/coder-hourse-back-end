@@ -31,14 +31,14 @@ socket.on("NEW_MESSAGE", msg => {
 
 
 const appendMessage = msg => {
-    let {email, avatar} = msg.author;
+    let {age, avatar, alias, firstName, lastName} = msg.author;
     let {date, text} = msg;
 
     date = new Date(date).toLocaleString();
 
     document.getElementById("chat").innerHTML += `
-        <div>
-        <b>[${date}] ${email}:</b> ${text} <img src=${avatar} class="img-thumbnail rounded-circle" style="max-width: 80px">
+        <div class="mb-3">
+        <b>[${date}] ${alias} (${firstName} ${lastName} - Age: ${age})</b> ${text} <img src=${avatar} class="img-thumbnail rounded-circle" style="max-width: 80px">
         </div>
     `
 
