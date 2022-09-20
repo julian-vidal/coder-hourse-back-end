@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <title>Add a Product</title>
+    </head>
+
+    <body>
+        <main  class="container pt-5">
+            <div class="row">
+                <div class="alert alert-dark" role="alert">
+                    <h4 class="alert-heading">Welcome, <%= name %>! </h4>
+                    <p>Your session expires on <%= expirationDate.toLocaleString() %> </p>
+                    <a href="/logout" class="btn btn-danger">Logout</a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <h1>Add a new product</h1>
+
+                    <form action="/productos" method="post">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="number" name="price" class="form-control" placeholder="Price" required >
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="url" name="picture" placeholder="URL of the picture" class="form-control" required>
+                        </div>
+                        
+                        <input type="submit" value="Add product" class="btn btn-primary">
+                    </form>
+                </div>
+            </div> <!-- Form to add a product -->
+
+            <hr>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <h1>Product List</h1>
+                    <% if(products.length>0) { %> 
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Picture</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for (let product of products) { %> 
+                                        <tr>
+                                            <td scope="row"><%= product.name %> </th>
+                                            <td><%= product.price %></td>
+                                            <td><img src=<%= product.picture %> alt=<%= product.name %> style="width:50px; height:50px; object-fill:cover" /> </td>
+                                        </tr>
+                                    <% } %> 
+                                
+                                
+                                </tbody>
+                        
+                            </table>
+                        
+                          </div>
+                    <% } else { %> 
+                        <div class="alert alert-warning" role="alert">
+                            No data was found
+                        </div>
+                    <% } %> 
+                </div>
+            </div> <!-- Table to display products -->
+        </main>
+
+    </body>
+
+</html>
