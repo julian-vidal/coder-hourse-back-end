@@ -141,9 +141,12 @@ User Routes
 
 // Signup 
 app.post("/signup", passport.authenticate("signup", {
+    usernameField: "user2@test.com",
+    passwordField: "user2",
     failureRedirect: "/error",
     failureMessage: "User already exists",
 }), (req,res) => {
+    console.log(`req.session.user: ${req.session.user}`)
     req.session.user = req.user
     res.redirect("/products")
 })
@@ -155,6 +158,8 @@ app.get("/signup", isLoggedIn, (req,res) => {
 
 // Login
 app.post("/login", passport.authenticate("login", {
+    usernameField: "user1@test.com",
+    passwordField: "user1",
     failureRedirect: "/error",
     failureMessage: "Invalid username or password",
 }), (req,res) => {
