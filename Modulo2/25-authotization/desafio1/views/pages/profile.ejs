@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, <%= user.username %></h1>
+    <h4>Profile</h4>
+    <p>Number of visits: <%= counter %></p>
+    <p>Address: <%= user.address %> </p>
+    <a href="" id="logout">Log out</a>
+
+    
+    
+    <script>
+    
+        const logout = document.getElementById("logout")
+        logout.addEventListener("click", () => {
+            fetch("/logout", {
+                method: "POST",
+                headers: {
+                    'Content-Type': "application/json"
+            }
+            
+            })
+            .then (() => {
+                console.log(res)
+                // window.location.href = "/"
+            })
+
+            
+        }
+        )
+    </script>
+    
+
+    
+
+</body>
+</html>
