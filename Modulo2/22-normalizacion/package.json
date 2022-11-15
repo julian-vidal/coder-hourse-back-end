@@ -1,0 +1,16 @@
+{
+  "name": "22-normalizacion",
+  "version": "1.0.0",
+  "description": "Es un proceso de estandarización y validación de datos que consiste en eliminar las redundancias o inconsistencias, completando datos mediante una serie de reglas que actualizan la información, protegiendo su integridad y favoreciendo la interpretación, para que así sea más fácil de consultar y más útil para quien la gestiona.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "normalizr": "^3.6.2"
+  }
+}

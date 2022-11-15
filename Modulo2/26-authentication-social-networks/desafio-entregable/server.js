@@ -141,8 +141,8 @@ User Routes
 
 // Signup 
 app.post("/signup", passport.authenticate("signup", {
-    usernameField: "user2@test.com",
-    passwordField: "user2",
+    usernameField: "email",
+    passwordField: "password",
     failureRedirect: "/error",
     failureMessage: "User already exists",
 }), (req,res) => {

@@ -1,0 +1,15 @@
+{
+  "name": "21-mocks",
+  "version": "1.0.0",
+  "description": "- TDD (Test-Driven Development) es una **práctica de programación** que consiste en **escribir primero las pruebas** (generalmente unitarias), **después** escribir el **código fuente** que pase la prueba satisfactoriamente y, **por último, refactorizar** el código escrito.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}

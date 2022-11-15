@@ -50,3 +50,7 @@ db.runCommand({
 
 ## Check current user
 `db.runCommand({connectionStatus : 1})`
+
+
+# Delete a collection
+`db.<colelctionName>.drop()`
