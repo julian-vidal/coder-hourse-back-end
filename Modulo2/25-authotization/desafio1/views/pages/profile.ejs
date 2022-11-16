@@ -18,7 +18,8 @@
     <script>
     
         const logout = document.getElementById("logout")
-        logout.addEventListener("click", () => {
+        logout.addEventListener("click", e => {
+            console.log("Log out link clicked")
             fetch("/logout", {
                 method: "POST",
                 headers: {
@@ -26,9 +27,11 @@
             }
             
             })
-            .then (() => {
+
+            
+            .then ((res) => {
                 console.log(res)
-                // window.location.href = "/"
+                window.location.href("/login")
             })
 
             
