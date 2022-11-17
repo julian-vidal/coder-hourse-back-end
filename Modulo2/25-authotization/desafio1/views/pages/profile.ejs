@@ -19,6 +19,8 @@
     
         const logout = document.getElementById("logout")
         logout.addEventListener("click", e => {
+            e.preventDefault()
+
             console.log("Log out link clicked")
             fetch("/logout", {
                 method: "POST",
@@ -26,12 +28,9 @@
                     'Content-Type': "application/json"
             }
             
-            })
-
-            
-            .then ((res) => {
-                console.log(res)
-                window.location.href("/login")
+            }).then (res => {
+                console.log(res);
+                window.location.href = "/login";
             })
 
             
