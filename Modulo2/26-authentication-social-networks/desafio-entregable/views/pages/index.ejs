@@ -10,7 +10,8 @@
             <div class="row">
                 <div class="alert alert-dark" role="alert">
                     <h4 class="alert-heading">Welcome, <%= user.email %>! </h4>
-                    <!-- <p>Your session expires on <%= expirationDate.toLocaleString() %> </p> -->
+                    <!-- <p>Your session expires on <%# expirationDate.toLocaleString() %> </p> -->
+                    <%= expirationDate %> 
                     <a href="/logout" class="btn btn-danger">Logout</a>
                 </div>
             </div>
