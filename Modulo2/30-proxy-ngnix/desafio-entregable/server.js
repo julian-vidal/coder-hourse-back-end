@@ -3,10 +3,12 @@ Server Setup
 ========================================== */
 const os = require("os")
 const yargs = require("yargs")
+const cluster = require("cluster")
 
 let args = yargs(process.argv.slice(2)) 
     .alias({
-        p: "port"
+        p: "port",
+        m: "mode"
     })
     .default({
         port: 8080,
@@ -23,10 +25,46 @@ const MODE = args.mode;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-server = app.listen(PORT, () => {
-    console.log(`Server is listening at port ${PORT}`);
-})
-server.on("error", err => console.log())
+
+
+const numCPUs = os.cpus().length
+
+// console.log(cluster.isMaster)
+// console.log(numCPUs)
+
+if(MODE == "CLUSTER") {
+
+    if(cluster.isMaster){
+        for(let i=0; i <numCPUs; i++){
+            cluster.fork()
+        }
+        
+        cluster.on("exit", () => {
+            console.log(`Worker died ${process.pid}`)
+            cluster.fork()
+        })
+        
+    } else {
+        app.listen(PORT, () => {
+            console.log({
+                PORT,
+                MODE,
+                "PROCESS ID": process.pid
+            });
+        })
+    }
+
+} else {
+    app.listen(PORT, () => {
+        console.log({
+            PORT,
+            MODE,
+            "PROCESS ID": process.pid
+        });
+    })
+}
+
+
 
 /* ==========================================
 DB Connection
@@ -46,11 +84,11 @@ const retries= 0
 
 app.use(session({
     store: new MongoStore({
-        mongoUrl: process.env.MONGO_URL_SESSIONS,
+        mongoUrl: process.env.MONGO_URL_SESSIONS || "mongodb://localhost:27017/sessions",
         ttl, //seconds
         retries
     }),
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || "deb7dez-NKG5tpg*qjg",
     resave: false,
     saveUninitialized: true
 }))
@@ -67,40 +105,52 @@ const {Types} = require("mongoose")
 
 
 // Check if the username and password provided match with a user in MongoDB 
-passport.use("login", new LocalStrategy(async (email, password, done) => {
-    const user = await User.findOne({email})
-    console.log(`passport email: ${email}`)
-    console.log(`user: ${user}`)
-    if(!user){
-        return done()
+passport.use("login", new LocalStrategy({usernameField: "email",
+passwordField: "password"}, async (email, password, done) => {
+
+    try {
+        const user = await User.findOne({email})
+        console.log(`user: ${user}`)
+
+        if(!user || !comparePassword(password, user.password)){
+            return done(null, false, {message: "User doesn't exist or password doesn't match"})
+        }
+
+        return done(null, user)
+
+    } catch (error) {
+        return done(error)
     }
-
-    const passHash = user.password;
-
-    if (user && !comparePassword(password, passHash)){
-        return done()
-    }
-
-    return done(null, user)
+    
 }))
 
 // Check if the username exists in MongoDB, If so, returns an error, otherwise, creates a new user
-passport.use("signup", new LocalStrategy({
-    passReqToCallback: true
-}, async(req, email, password, done) => {
-    const user = await User.findOne({email})
-    if(user) {
-        return done()
-    }
+passport.use("signup", new LocalStrategy(
+    {passReqToCallback: true,
+        usernameField: "email",
+        passwordField: "password"
+    },
+    async(req, email, password, done) => {
+        console.log({email})
+        const user = await User.findOne({email})
+        if(user) {
+            // console.log({user})
+            return done(null, false, {message: "User already exists :p"})
+        }
 
-    const hashedPassword = hashPassword(password)
-    const newUser = new User ({email, password: hashedPassword})
-    await newUser.save()
-    return done(null, newUser)
-}))
+        const hashedPassword = hashPassword(password)
+        console.log(hashedPassword);
+        const newUser = new User ({
+            email,
+            password: hashedPassword
+        })
+        await newUser.save()
+        return done(null, newUser)
+    }
+))
 
 passport.serializeUser((user,done) => {
-    done(null, user.id)
+    done(null, user._id)
 })
 
 passport.deserializeUser(async (id,done) => {
@@ -111,7 +161,6 @@ passport.deserializeUser(async (id,done) => {
 
 app.use(passport.initialize())
 app.use(passport.session())
-
 
 
 
@@ -196,13 +245,12 @@ User Routes
 
 // Signup 
 app.post("/signup", passport.authenticate("signup", {
-    usernameField: "email",
-    passwordField: "password",
     failureRedirect: "/error",
-    failureMessage: "User already exists",
+    // failureMessage: "User already exists!!!",
+    usernameField: "email",
+    passwordField: "password"
 }), (req,res) => {
-    console.log(`req.session.user: ${req.session.user}`)
-    req.session.user = req.user
+    console.log("Hey")
     res.redirect("/products")
 })
 
@@ -213,10 +261,10 @@ app.get("/signup", isLoggedIn, (req,res) => {
 
 // Login
 app.post("/login", passport.authenticate("login", {
-    usernameField: "user1@test.com",
-    passwordField: "user1",
     failureRedirect: "/error",
     failureMessage: "Invalid username or password",
+    usernameField: "email",
+    passwordField: "password"
 }), (req,res) => {
     req.session.user = req.user
     res.redirect("/products")
@@ -226,17 +274,23 @@ app.get("/login", isLoggedIn, (req,res) => {
     res.render("login")
 })
 
-// Profile
+// Products
 app.get("/products", (req,res) => {
     if(!req.session.counter) {
         req.session.counter = 1
     } else {
         req.session.counter++
     }
+    console.log(req.session.cookie)
+    // console.log(Object.keys(req.session.cookie));
+
     res.render("index" , {
-        user: req.session.user,
+        user: req.user,
         counter: req.session.counter,
         products: products.products,
+        
+        expirationDate: req.session.cookie.sessionID
+
     })
 })
 
