@@ -185,10 +185,11 @@ app.get("/login", isLoggedIn, (req,res) => {
 app.get("/products", (req,res) => {
     if(!req.session.counter) {
         req.session.counter = 1
+        req.session.cookie.maxAge = 1000 * 60
     } else {
         req.session.counter++
     }
-    console.log(req.session.cookie)
+    console.log(req.session)
     // console.log(Object.keys(req.session.cookie));
 
     res.render("index" , {
@@ -196,7 +197,7 @@ app.get("/products", (req,res) => {
         counter: req.session.counter,
         products: products.products,
         
-        expirationDate: req.session.cookie.sessionID
+        expirationDate: req.session.cookie.expires
 
     })
 })
