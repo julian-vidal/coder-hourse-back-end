@@ -1,0 +1,8 @@
+{"level":"warn","message":"Route not found /"}
+{"level":"warn","message":"Route not found /favicon.ico"}
+{"level":"warn","message":"Route not found /"}
+{"level":"info","message":"1111 + 23432 = 24543"}
+{"level":"error","message":"Something went wrong: Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"error","message":"Invalud input: num1=1111, num2=2ghj"}
+{"level":"error","message":"Something went wrong: Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"error","message":"Invalud input: num1=1111, num2=2ghj"}

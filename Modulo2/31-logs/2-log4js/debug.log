@@ -1,0 +1,21 @@
+[2022-11-21T20:22:02.920] [ERROR] productionLogger - Invalud input: num1=1111, num2=as
+[2022-11-21T20:22:17.780] [DEBUG] productionLogger - Message debug
+[2022-11-21T20:22:17.781] [WARN] productionLogger - Message warn
+[2022-11-21T20:22:17.781] [ERROR] productionLogger - Message error
+[2022-11-21T20:22:17.781] [FATAL] productionLogger - Message fatal
+[2022-11-21T20:22:18.611] [DEBUG] productionLogger - Message debug
+[2022-11-21T20:22:18.612] [WARN] productionLogger - Message warn
+[2022-11-21T20:22:18.612] [ERROR] productionLogger - Message error
+[2022-11-21T20:22:18.612] [FATAL] productionLogger - Message fatal
+[2022-11-21T20:24:39.362] [DEBUG] productionLogger - Message debug
+[2022-11-21T20:24:39.362] [WARN] productionLogger - Message warn
+[2022-11-21T20:24:39.362] [ERROR] productionLogger - Message error
+[2022-11-21T20:24:39.363] [FATAL] productionLogger - Message fatal
+[2022-11-21T20:24:57.196] [DEBUG] productionLogger - Message debug
+[2022-11-21T20:24:57.197] [WARN] productionLogger - Message warn
+[2022-11-21T20:24:57.197] [ERROR] productionLogger - Message error
+[2022-11-21T20:24:57.197] [FATAL] productionLogger - Message fatal
+[2022-11-21T20:25:18.413] [ERROR] productionLogger - Invalud input: num1=1111, num2=as
+[2022-11-21T20:26:32.311] [ERROR] productionLogger - Something went wrong: Error: listen EADDRINUSE: address already in use :::8080
+[2022-11-21T20:29:23.316] [WARN] productionLogger - Route not found /asd
+[2022-11-21T20:31:37.512] [WARN] productionLogger - Route not found /asd
