@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "0x": "^5.4.1",
+    "artillery": "^2.0.0-27",
+    "express": "^4.18.2"
+  },
+  "name": "32-profilling",
+  "description": "* Artillery es una dependencia de Node moderna, potente, fácil y muy útil para realizar test de carga a servidores. * Cuenta con un conjunto de herramientas para tests de performance que se usa para enviar aplicaciones escalables que se mantengan eficaces y resistentes bajo cargas elevadas. * Podemos usar Artillery para ejecutar dos tipos de pruebas de rendimiento:   * Pruebas que cargan un sistema, o sea, pruebas de carga, de estrés.   * Pruebas que verifican que un sistema funciona como se esperaba, es decir, pruebas funcionales continuas.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx 0x 4-fork-cluster.js 8080",
+    "benchmark": "node benchmark.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
