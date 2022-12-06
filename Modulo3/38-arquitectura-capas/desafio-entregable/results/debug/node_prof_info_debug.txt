@@ -1,0 +1,1125 @@
+Statistical profiling result from log-v8-degub.log, (1513 ticks, 31 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     36    2.4%          /usr/lib/system/libsystem_kernel.dylib
+     31    2.0%          /usr/lib/system/libsystem_malloc.dylib
+     31    2.0%          /usr/lib/system/libsystem_c.dylib
+     10    0.7%          /usr/lib/libc++.1.dylib
+      3    0.2%          /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+      1    0.1%          /usr/lib/system/libsystem_platform.dylib
+      1    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.2%    0.2%  LazyCompile: *serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      3    0.2%    0.2%  LazyCompile: *resolve node:path:1091:10
+      3    0.2%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      3    0.2%    0.2%  Function: ^get description /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:144:20
+      2    0.1%    0.1%  LazyCompile: *processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:418:21
+      2    0.1%    0.1%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:676:37
+      2    0.1%    0.1%  Function: ^slice node:buffer:599:12
+      2    0.1%    0.1%  Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:546:26
+      1    0.1%    0.1%  RegExp: ^text\/|^application\/(javascript|json)
+      1    0.1%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.1%    0.1%  RegExp: [^ _0-9a-z]
+      1    0.1%    0.1%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.1%    0.1%  LazyCompile: *validateNumber node:internal/validators:176:24
+      1    0.1%    0.1%  LazyCompile: *subarray node:buffer:1122:46
+      1    0.1%    0.1%  LazyCompile: *slowCases node:internal/util:168:19
+      1    0.1%    0.1%  LazyCompile: *readPackageScope node:internal/modules/cjs/loader:368:26
+      1    0.1%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    0.1%    0.1%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      1    0.1%    0.1%  LazyCompile: *maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1    0.1%    0.1%  LazyCompile: *getValidatedString /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/deserializer.js:650:28
+      1    0.1%    0.1%  LazyCompile: *get node:internal/bootstrap/node:95:8
+      1    0.1%    0.1%  LazyCompile: *dirname node:path:1275:10
+      1    0.1%    0.1%  LazyCompile: *cpus node:os:141:14
+      1    0.1%    0.1%  LazyCompile: *alignPool node:buffer:163:19
+      1    0.1%    0.1%  LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:203:10
+      1    0.1%    0.1%  Function: ^write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:404:15
+      1    0.1%    0.1%  Function: ^unenroll node:timers:78:18
+      1    0.1%    0.1%  Function: ^toString /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:846:13
+      1    0.1%    0.1%  Function: ^size /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/denque/index.js:96:38
+      1    0.1%    0.1%  Function: ^setHasRejectionToWarn node:internal/process/promises:77:31
+      1    0.1%    0.1%  Function: ^set expires /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/cookie.js:60:14
+      1    0.1%    0.1%  Function: ^serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1    0.1%    0.1%  Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      1    0.1%    0.1%  Function: ^push /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/denque/index.js:136:38
+      1    0.1%    0.1%  Function: ^processIncomingData /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    0.1%    0.1%  Function: ^parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:426:10
+      1    0.1%    0.1%  Function: ^makeFindCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/find.js:55:25
+      1    0.1%    0.1%  Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1    0.1%    0.1%  Function: ^jsonParser /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/body-parser/lib/types/json.js:98:30
+      1    0.1%    0.1%  Function: ^isSaved /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:430:21
+      1    0.1%    0.1%  Function: ^header /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:777:29
+      1    0.1%    0.1%  Function: ^get loadBalanced /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:147:21
+      1    0.1%    0.1%  Function: ^get isActive /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/transactions.js:98:17
+      1    0.1%    0.1%  Function: ^get generation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:98:19
+      1    0.1%    0.1%  Function: ^get data /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/cookie.js:117:11
+      1    0.1%    0.1%  Function: ^get clusterTime /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:107:20
+      1    0.1%    0.1%  Function: ^get /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/bson.js:20:76
+      1    0.1%    0.1%  Function: ^get /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/node_modules/debug/src/common.js:125:9
+      1    0.1%    0.1%  Function: ^endReadableNT node:internal/streams/readable:1352:23
+      1    0.1%    0.1%  Function: ^deserializeObject /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    0.1%    0.1%  Function: ^createWriteHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:24:26
+      1    0.1%    0.1%  Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:150:12
+      1    0.1%    0.1%  Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1    0.1%    0.1%  Function: ^clearBuffer node:internal/streams/writable:532:21
+      1    0.1%    0.1%  Function: ^checkListener node:events:265:23
+      1    0.1%    0.1%  Function: ^checkInvalidHeaderChar node:_http_common:221:32
+      1    0.1%    0.1%  Function: ^attempt /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/passport/lib/middleware/authenticate.js:180:22
+      1    0.1%    0.1%  Function: ^assert node:internal/assert:11:16
+      1    0.1%    0.1%  Function: ^app.<computed> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/application.js:490:25
+      1    0.1%    0.1%  Function: ^alloc node:buffer:365:30
+      1    0.1%    0.1%  Function: ^afterWriteTick node:internal/streams/writable:485:24
+      1    0.1%    0.1%  Function: ^addListeners /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:229:23
+      1    0.1%    0.1%  Function: ^_writeRaw node:_http_outgoing:371:19
+      1    0.1%    0.1%  Function: ^_unrefTimer node:net:477:52
+      1    0.1%    0.1%  Function: ^_send node:_http_outgoing:336:49
+      1    0.1%    0.1%  Function: ^TypedEventEmitter /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/mongo_types.js:34:1
+      1    0.1%    0.1%  Function: ^TypedEventEmitter /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/mongo_types.js:34:1
+      1    0.1%    0.1%  Function: ^MongoDBNamespace /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:305:16
+      1    0.1%    0.1%  Function: ^ConnectionCheckOutStartedEvent /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool_events.js:102:16
+      1    0.1%    0.1%  Function: ^ClientSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:45:16
+      1    0.1%    0.1%  Function: ^Binary /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/binary.js:42:20
+      1    0.1%    0.1%  Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/connect.js:53:28
+
+ [C++]:
+   ticks  total  nonlib   name
+    789   52.1%   56.4%  T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+     75    5.0%    5.4%  t __posix_spawn_file_actions_grow
+     57    3.8%    4.1%  T _host_request_notification
+     53    3.5%    3.8%  t _Builtins_LoadIC
+     24    1.6%    1.7%  T __kernelrpc_mach_port_get_refs
+     14    0.9%    1.0%  T _kdebug_typefilter
+     13    0.9%    0.9%  t __pthread_bsdthread_init
+     11    0.7%    0.8%  t _Builtins_StrictEqual_Baseline
+     11    0.7%    0.8%  t _Builtins_StoreIC
+     10    0.7%    0.7%  t _Builtins_SetDataProperties
+     10    0.7%    0.7%  T ___pthread_init
+      9    0.6%    0.6%  t _Builtins_BaselineLeaveFrame
+      8    0.5%    0.6%  t _Builtins_LoadICBaseline
+      8    0.5%    0.6%  T _mach_vm_map
+      7    0.5%    0.5%  t _Builtins_StringAdd_CheckNone
+      7    0.5%    0.5%  t _Builtins_KeyedLoadIC_Megamorphic
+      7    0.5%    0.5%  t _Builtins_CallFunction_ReceiverIsNotNullOrUndefined
+      6    0.4%    0.4%  t _Builtins_Call_ReceiverIsNotNullOrUndefined_Baseline_Compact
+      5    0.3%    0.4%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      5    0.3%    0.4%  t _Builtins_ToBooleanForBaselineJump
+      5    0.3%    0.4%  t _Builtins_InterpreterEntryTrampoline
+      5    0.3%    0.4%  t _Builtins_CallFunction_ReceiverIsAny
+      5    0.3%    0.4%  T _mach_vm_allocate
+      4    0.3%    0.3%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      4    0.3%    0.3%  t _Builtins_LoadIC_Megamorphic
+      4    0.3%    0.3%  t _Builtins_DefineNamedOwnIC
+      4    0.3%    0.3%  t _Builtins_BaselineOutOfLinePrologue
+      3    0.2%    0.2%  t __os_once_gate_wait
+      3    0.2%    0.2%  t ___pfz_setup
+      3    0.2%    0.2%  t _Builtins_LoadIC_NoFeedback
+      3    0.2%    0.2%  t _Builtins_KeyedLoadIC
+      3    0.2%    0.2%  t _Builtins_GetProperty
+      3    0.2%    0.2%  t _Builtins_DefineNamedOwnICBaseline
+      3    0.2%    0.2%  t _Builtins_CreateShallowObjectLiteral
+      3    0.2%    0.2%  t _Builtins_Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      3    0.2%    0.2%  T _task_restartable_ranges_synchronize
+      3    0.2%    0.2%  T _mach_msg_server_once
+      2    0.1%    0.1%  t __pthread_main_thread_init
+      2    0.1%    0.1%  t __os_nospin_lock_unlock_slow
+      2    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      2    0.1%    0.1%  t _Builtins_TypedArrayPrototypeLength
+      2    0.1%    0.1%  t _Builtins_StoreICBaseline
+      2    0.1%    0.1%  t _Builtins_RecordWriteEmitRememberedSetSaveFP
+      2    0.1%    0.1%  t _Builtins_ObjectCreate
+      2    0.1%    0.1%  t _Builtins_MultiplySmi_Baseline
+      2    0.1%    0.1%  t _Builtins_LoadICTrampoline
+      2    0.1%    0.1%  t _Builtins_LoadGlobalICBaseline
+      2    0.1%    0.1%  t _Builtins_KeyedStoreIC_Megamorphic
+      2    0.1%    0.1%  t _Builtins_KeyedStoreIC
+      2    0.1%    0.1%  t _Builtins_KeyedLoadIC_PolymorphicName
+      2    0.1%    0.1%  t _Builtins_FastNewClosure
+      2    0.1%    0.1%  t _Builtins_CreateTypedArray
+      2    0.1%    0.1%  t _Builtins_CreateDataProperty
+      2    0.1%    0.1%  t _Builtins_Call_ReceiverIsNotNullOrUndefined
+      2    0.1%    0.1%  t _Builtins_Call_ReceiverIsAny
+      2    0.1%    0.1%  t _Builtins_CallFunction_ReceiverIsNullOrUndefined
+      2    0.1%    0.1%  t _Builtins_ArrayIsArray
+      2    0.1%    0.1%  t _Builtins_AddSmi_Baseline
+      2    0.1%    0.1%  T _thread_destruct_special_reply_port
+      1    0.1%    0.1%  t __pthread_strtoul
+      1    0.1%    0.1%  t _Builtins_WeakCollectionSet
+      1    0.1%    0.1%  t _Builtins_ToString
+      1    0.1%    0.1%  t _Builtins_ThrowReferenceErrorIfHoleHandler
+      1    0.1%    0.1%  t _Builtins_Subtract_Baseline
+      1    0.1%    0.1%  t _Builtins_SubtractSmi_Baseline
+      1    0.1%    0.1%  t _Builtins_StringSubstring
+      1    0.1%    0.1%  t _Builtins_StrictEqual_WithFeedback
+      1    0.1%    0.1%  t _Builtins_StoreInArrayLiteralIC
+      1    0.1%    0.1%  t _Builtins_StoreFastElementIC_Standard
+      1    0.1%    0.1%  t _Builtins_SetPrototypeHas
+      1    0.1%    0.1%  t _Builtins_RecordWriteEmitRememberedSetIgnoreFP
+      1    0.1%    0.1%  t _Builtins_PromiseFulfillReactionJob
+      1    0.1%    0.1%  t _Builtins_ObjectToString
+      1    0.1%    0.1%  t _Builtins_ObjectGetOwnPropertyDescriptor
+      1    0.1%    0.1%  t _Builtins_ObjectAssign
+      1    0.1%    0.1%  t _Builtins_MathMin
+      1    0.1%    0.1%  t _Builtins_MapPrototypeValues
+      1    0.1%    0.1%  t _Builtins_LoadSuperICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadICTrampoline_Megamorphic
+      1    0.1%    0.1%  t _Builtins_LdarHandler
+      1    0.1%    0.1%  t _Builtins_KeyedLoadICBaseline
+      1    0.1%    0.1%  t _Builtins_KeyedHasIC_PolymorphicName
+      1    0.1%    0.1%  t _Builtins_JSEntry
+      1    0.1%    0.1%  t _Builtins_JSConstructStubGeneric
+      1    0.1%    0.1%  t _Builtins_Increment_Baseline
+      1    0.1%    0.1%  t _Builtins_GetNamedPropertyHandler
+      1    0.1%    0.1%  t _Builtins_FunctionPrototypeHasInstance
+      1    0.1%    0.1%  t _Builtins_FunctionPrototypeCall
+      1    0.1%    0.1%  t _Builtins_CreateUnmappedArgumentsHandler
+      1    0.1%    0.1%  t _Builtins_CreateRegExpLiteral
+      1    0.1%    0.1%  t _Builtins_Construct_Baseline
+      1    0.1%    0.1%  t _Builtins_CloneObjectIC
+      1    0.1%    0.1%  t _Builtins_Call_ReceiverIsNullOrUndefined
+      1    0.1%    0.1%  t _Builtins_CallApiCallback
+      1    0.1%    0.1%  t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+      1    0.1%    0.1%  t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_BuiltinExit
+      1    0.1%    0.1%  t _Builtins_ArraySingleArgumentConstructor_HoleySmi_DisableAllocationSites
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypeShift
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypePush
+      1    0.1%    0.1%  t _Builtins_ArrayConstructorImpl
+      1    0.1%    0.1%  t _Builtins_Add_Baseline
+      1    0.1%    0.1%  T node::Environment::RunAndClearNativeImmediates(bool)
+      1    0.1%    0.1%  T _task_set_special_port
+      1    0.1%    0.1%  T _task_get_special_port
+      1    0.1%    0.1%  T _socket
+      1    0.1%    0.1%  T _os_unfair_recursive_lock_lock_with_options
+      1    0.1%    0.1%  T _os_copy_and_inet_checksum
+      1    0.1%    0.1%  T _host_create_mach_voucher
+      1    0.1%    0.1%  T __os_semaphore_dispose
+      1    0.1%    0.1%  T ___libplatform_init
+
+ [Summary]:
+   ticks  total  nonlib   name
+     84    5.6%    6.0%  JavaScript
+   1285   84.9%   91.8%  C++
+     65    4.3%    4.6%  GC
+    113    7.5%          Shared libraries
+     31    2.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    737   62.6%   48.7%  T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+     53    4.5%    3.5%  T _host_request_notification
+     50    4.2%    3.3%  t _Builtins_LoadIC
+     43    3.7%    2.8%  t _Builtins_CallApiCallback
+     20    1.7%    1.3%  T __kernelrpc_mach_port_get_refs
+     13    1.1%    0.9%  T _kdebug_typefilter
+     11    0.9%    0.7%  t __pthread_bsdthread_init
+     11    0.9%    0.7%  t _Builtins_StoreIC
+     11    0.9%    0.7%  t _Builtins_ObjectAssign
+     11    0.9%    0.7%  t _Builtins_KeyedLoadIC_Megamorphic
+     10    0.8%    0.7%  t _Builtins_StrictEqual_Baseline
+      9    0.8%    0.6%  T ___pthread_init
+      8    0.7%    0.5%  t _Builtins_LoadICBaseline
+      8    0.7%    0.5%  t _Builtins_BaselineLeaveFrame
+      7    0.6%    0.5%  t _Builtins_CallFunction_ReceiverIsNotNullOrUndefined
+      6    0.5%    0.4%  t _Builtins_StringAdd_CheckNone
+      6    0.5%    0.4%  t _Builtins_KeyedStoreIC_Megamorphic
+      6    0.5%    0.4%  t _Builtins_Call_ReceiverIsNotNullOrUndefined_Baseline_Compact
+      5    0.4%    0.3%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      5    0.4%    0.3%  t _Builtins_ToBooleanForBaselineJump
+      5    0.4%    0.3%  t _Builtins_InterpreterEntryTrampoline
+      5    0.4%    0.3%  t _Builtins_CallFunction_ReceiverIsAny
+      4    0.3%    0.3%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      4    0.3%    0.3%  t _Builtins_LoadIC_Megamorphic
+      4    0.3%    0.3%  t _Builtins_DefineNamedOwnIC
+      4    0.3%    0.3%  t _Builtins_BaselineOutOfLinePrologue
+      3    0.3%    0.2%  t ___pfz_setup
+      3    0.3%    0.2%  t _Builtins_LoadIC_NoFeedback
+      3    0.3%    0.2%  t _Builtins_KeyedLoadIC
+      3    0.3%    0.2%  t _Builtins_GetProperty
+      3    0.3%    0.2%  t _Builtins_DefineNamedOwnICBaseline
+      3    0.3%    0.2%  t _Builtins_CreateTypedArray
+      3    0.3%    0.2%  t _Builtins_CreateShallowObjectLiteral
+      3    0.3%    0.2%  t _Builtins_Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      3    0.3%    0.2%  t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+      3    0.3%    0.2%  t _Builtins_ArrayPrototypePush
+      3    0.3%    0.2%  T _mach_msg_server_once
+      2    0.2%    0.1%  t __pthread_main_thread_init
+      2    0.2%    0.1%  t _Builtins_TypedArrayPrototypeLength
+      2    0.2%    0.1%  t _Builtins_StringPrototypeToLowerCaseIntl
+      2    0.2%    0.1%  t _Builtins_StoreICBaseline
+      2    0.2%    0.1%  t _Builtins_SetPrototypeHas
+      2    0.2%    0.1%  t _Builtins_PromiseConstructor
+      2    0.2%    0.1%  t _Builtins_ObjectCreate
+      2    0.2%    0.1%  t _Builtins_MultiplySmi_Baseline
+      2    0.2%    0.1%  t _Builtins_MapPrototypeGet
+      2    0.2%    0.1%  t _Builtins_LoadICTrampoline
+      2    0.2%    0.1%  t _Builtins_LoadGlobalICBaseline
+      2    0.2%    0.1%  t _Builtins_KeyedStoreIC
+      2    0.2%    0.1%  t _Builtins_FunctionPrototypeHasInstance
+      2    0.2%    0.1%  t _Builtins_FindOrderedHashMapEntry
+      2    0.2%    0.1%  t _Builtins_FastNewClosure
+      2    0.2%    0.1%  t _Builtins_CreateDataProperty
+      2    0.2%    0.1%  t _Builtins_Call_ReceiverIsNotNullOrUndefined
+      2    0.2%    0.1%  t _Builtins_Call_ReceiverIsAny
+      2    0.2%    0.1%  t _Builtins_CallFunction_ReceiverIsNullOrUndefined
+      2    0.2%    0.1%  t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_BuiltinExit
+      2    0.2%    0.1%  t _Builtins_ArrayIsArray
+      2    0.2%    0.1%  t _Builtins_ArrayForEach
+      2    0.2%    0.1%  t _Builtins_AddSmi_Baseline
+      2    0.2%    0.1%  T _thread_destruct_special_reply_port
+      1    0.1%    0.1%  t __pthread_strtoul
+      1    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      1    0.1%    0.1%  t _Builtins_WeakMapPrototypeSet
+      1    0.1%    0.1%  t _Builtins_ToString
+      1    0.1%    0.1%  t _Builtins_Subtract_Baseline
+      1    0.1%    0.1%  t _Builtins_SubtractSmi_Baseline
+      1    0.1%    0.1%  t _Builtins_StringSubstring
+      1    0.1%    0.1%  t _Builtins_StringPrototypeReplace
+      1    0.1%    0.1%  t _Builtins_StrictEqual_WithFeedback
+      1    0.1%    0.1%  t _Builtins_StoreInArrayLiteralIC
+      1    0.1%    0.1%  t _Builtins_StoreFastElementIC_Standard
+      1    0.1%    0.1%  t _Builtins_RecordWriteEmitRememberedSetSaveFP
+      1    0.1%    0.1%  t _Builtins_RecordWriteEmitRememberedSetIgnoreFP
+      1    0.1%    0.1%  t _Builtins_ObjectToString
+      1    0.1%    0.1%  t _Builtins_ObjectGetOwnPropertyDescriptor
+      1    0.1%    0.1%  t _Builtins_MathMin
+      1    0.1%    0.1%  t _Builtins_MapPrototypeValues
+      1    0.1%    0.1%  t _Builtins_LoadSuperICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadICTrampoline_Megamorphic
+      1    0.1%    0.1%  t _Builtins_LdarHandler
+      1    0.1%    0.1%  t _Builtins_KeyedLoadIC_PolymorphicName
+      1    0.1%    0.1%  t _Builtins_KeyedLoadICBaseline
+      1    0.1%    0.1%  t _Builtins_KeyedHasIC_PolymorphicName
+      1    0.1%    0.1%  t _Builtins_JSConstructStubGeneric
+      1    0.1%    0.1%  t _Builtins_Increment_Baseline
+      1    0.1%    0.1%  t _Builtins_GetNamedPropertyHandler
+      1    0.1%    0.1%  t _Builtins_FunctionPrototypeCall
+      1    0.1%    0.1%  t _Builtins_CreateUnmappedArgumentsHandler
+      1    0.1%    0.1%  t _Builtins_CreateRegExpLiteral
+      1    0.1%    0.1%  t _Builtins_Construct_Baseline
+      1    0.1%    0.1%  t _Builtins_CloneObjectIC
+      1    0.1%    0.1%  t _Builtins_ArraySingleArgumentConstructor_HoleySmi_DisableAllocationSites
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypeShift
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypeJoin
+      1    0.1%    0.1%  t _Builtins_ArrayMap
+      1    0.1%    0.1%  t _Builtins_ArrayConstructorImpl
+      1    0.1%    0.1%  t _Builtins_Add_Baseline
+      1    0.1%    0.1%  T _task_get_special_port
+      1    0.1%    0.1%  T _socket
+      1    0.1%    0.1%  T _os_unfair_recursive_lock_lock_with_options
+      1    0.1%    0.1%  T ___libplatform_init
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    789   52.1%  T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+    257   32.6%    Function: ^compileFunction node:vm:316:25
+    252   98.1%      Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+    251   99.6%        Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+    245   97.6%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+    245  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      6    2.4%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      6  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      5    1.9%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1073:18
+      5  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      5  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      4   80.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1   20.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1025:33
+     63    8.0%    Function: ^readSync node:fs:705:18
+     63  100.0%      Function: ^tryReadSync node:fs:444:21
+     63  100.0%        Function: ^readFileSync node:fs:465:22
+     59   93.7%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+     59  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      4    6.3%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      4  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+     25    3.2%    Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     24   96.0%      Function: ^Socket._writeGeneric node:net:891:42
+     24  100.0%        Function: ^Socket._writev node:net:923:36
+     24  100.0%          Function: ^doWrite node:internal/streams/writable:401:17
+     24  100.0%            Function: ^clearBuffer node:internal/streams/writable:532:21
+      1    4.0%      LazyCompile: *clearBuffer node:internal/streams/writable:532:21
+      1  100.0%        Function: ^Writable.uncork node:internal/streams/writable:344:37
+      1  100.0%          Function: ^end node:_http_outgoing:953:45
+      1  100.0%            LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:296:10
+     25    3.2%    Function: ^cpus node:os:141:14
+     25  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+     25  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+     25  100.0%          Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+     25  100.0%            Function: ^compression /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:59:31
+     25    3.2%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     20   80.0%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      4   20.0%        Function: ~<anonymous> node:http:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      3   15.0%        Function: ~<anonymous> node:tls:1:1
+      3  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2   10.0%        Function: ~<anonymous> node:child_process:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2   10.0%        Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%          LazyCompile: ~get node:crypto:369:8
+      1  100.0%            t _Builtins_ReflectGet
+      1    5.0%        LazyCompile: ~get node:dns:350:8
+      1  100.0%          t _Builtins_ReflectGet
+      1  100.0%            Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1    5.0%        Function: ~<anonymous> node:tty:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        Function: ~<anonymous> node:dgram:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        Function: ~<anonymous> node:assert:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    5.0%        Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.0%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3   12.0%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      3  100.0%        Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      2    8.0%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2  100.0%        LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      2  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:807:24
+      2  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:1053:36
+     23    2.9%    Function: ^read node:internal/modules/package_json_reader:16:14
+     21   91.3%      Function: ^readPackage node:internal/modules/cjs/loader:326:21
+     21  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:519:24
+     21  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+     19   90.5%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2    9.5%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2    8.7%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:541:28
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+     17    2.2%    Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3   17.6%      Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3  100.0%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      3  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2   11.8%      LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2   11.8%      Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2   11.8%      Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2   11.8%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      2  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.9%      LazyCompile: ~setupFetch node:internal/process/pre_execution:198:20
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.9%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.9%      LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:574:38
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.9%      Function: ~<anonymous> node:internal/readline/interface:1:1
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.9%      Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    5.9%      Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+     17    2.2%    Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     17  100.0%      Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     17  100.0%        Function: ^Socket._writeGeneric node:net:891:42
+     17  100.0%          Function: ^Socket._write node:net:928:35
+     17  100.0%            Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      8    1.0%    Function: ^initialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/passport/lib/middleware/initialize.js:51:29
+      6   75.0%      Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      6  100.0%        Function: ^trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      6  100.0%          LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      6  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:485:38
+      2   25.0%      LazyCompile: *trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      2  100.0%        LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      2  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:485:38
+      2  100.0%            LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:203:10
+
+     75    5.0%  t __posix_spawn_file_actions_grow
+
+     57    3.8%  T _host_request_notification
+     15   26.3%    LazyCompile: ~monitorHasAnotherHello /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:110:36
+     15  100.0%      Function: ^processIncomingData /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+     15  100.0%        Function: ^_write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+     15  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:368:23
+     15  100.0%            Function: ^_write node:internal/streams/writable:286:16
+     13   22.8%    Function: ^get loadBalanced /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:147:21
+     13  100.0%      Function: ^acquire /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:598:12
+     13  100.0%        Function: ^get serverSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:85:22
+     13  100.0%          Function: ^applySession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:662:22
+     13  100.0%            Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+     10   17.5%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:236:10
+     10  100.0%      Function: ^set /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:234:8
+     10  100.0%        Function: ^save /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/session.js:71:54
+     10  100.0%          Function: ^save /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:403:20
+     10  100.0%            Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+      9   15.8%    t _Builtins_ArrayPrototypePush
+      9  100.0%      Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      9  100.0%        Function: ^toBin /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:345:10
+      9  100.0%          Function: ^writeCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      9  100.0%            Function: ^write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:404:15
+      6   10.5%    t _Builtins_TypedArrayPrototypeLength
+      6  100.0%      LazyCompile: *deserializeObject /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/deserializer.js:65:27
+      6  100.0%        Function: ^deserialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/deserializer.js:36:21
+      6  100.0%          Function: ^deserialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:161:21
+      6  100.0%            Function: ^parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:426:10
+
+     53    3.5%  t _Builtins_LoadIC
+      2    3.8%    LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      2    3.8%    Function: ^session /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:179:26
+      1   50.0%      LazyCompile: *trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%        LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          Function: ^urlencodedParser /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1  100.0%            LazyCompile: *trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1   50.0%      Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^urlencodedParser /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      2    3.8%    Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:546:26
+      1   50.0%      LazyCompile: *selectServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:252:17
+      1  100.0%        Function: ^executeWithServerSelection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:85:36
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%            LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:296:10
+      1   50.0%      Function: ^selectServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:252:17
+      1  100.0%        Function: ^executeWithServerSelection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:85:36
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%            Function: ^maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      2    3.8%    Function: ^json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      2  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      2  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%          Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+      2  100.0%            Function: ^compression /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:59:31
+      2    3.8%    Function: ^get isPinned /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:126:17
+      2  100.0%      Function: ^executeWithServerSelection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:85:36
+      2  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1   50.0%          LazyCompile: *maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%            Function: ^executeOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1   50.0%          LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:296:10
+      1  100.0%            t _Builtins_AsyncFunctionAwaitResolveClosure
+      2    3.8%    Function: ^execute /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/update.js:22:12
+      2  100.0%      Function: ^execute /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/update.js:75:12
+      2  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:154:61
+      2  100.0%          Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:546:26
+      2  100.0%            Function: ^selectServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:252:17
+      2    3.8%    Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:154:61
+      2  100.0%      Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:546:26
+      2  100.0%        Function: ^selectServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:252:17
+      2  100.0%          Function: ^executeWithServerSelection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:85:36
+      2  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1    1.9%    t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+      1  100.0%      Function: ^send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1  100.0%        Function: ^json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1  100.0%            Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1    1.9%    LazyCompile: *serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%      Function: ^serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1  100.0%        Function: ^serializeBson /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:379:18
+      1  100.0%          Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1  100.0%            Function: ^toBin /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:345:10
+      1    1.9%    LazyCompile: *emit node:events:460:44
+      1  100.0%      Function: ^onFinish node:_http_outgoing:948:18
+      1  100.0%        Function: ^callback node:internal/streams/writable:553:44
+      1  100.0%          Function: ^afterWrite node:internal/streams/writable:490:20
+      1  100.0%            Function: ^afterWriteTick node:internal/streams/writable:485:24
+      1    1.9%    LazyCompile: *_write node:internal/streams/writable:286:16
+      1  100.0%      Function: ^Writable.write node:internal/streams/writable:336:36
+      1  100.0%        Function: ^ondata node:internal/streams/readable:764:18
+      1  100.0%          LazyCompile: *readableAddChunk node:internal/streams/readable:242:26
+      1  100.0%            Function: ^Readable.push node:internal/streams/readable:233:35
+      1    1.9%    Function: ^writeHead node:_http_server:338:19
+      1  100.0%      Function: ^writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%        Function: ^writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%          Function: ^_implicitHeader node:_http_server:333:68
+      1  100.0%            Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1    1.9%    Function: ^writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%      Function: ^writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%        Function: ^_implicitHeader node:_http_server:333:68
+      1  100.0%          Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1  100.0%            Function: ^send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1    1.9%    Function: ^writeCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%      Function: ^write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:404:15
+      1  100.0%        Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:284:23
+      1    1.9%    Function: ^write node:_http_outgoing:802:49
+      1  100.0%      Function: ^writetop /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:270:24
+      1  100.0%        Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+      1  100.0%          Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1  100.0%            Function: ^send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1    1.9%    Function: ^set expires /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/cookie.js:60:14
+      1  100.0%      t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+      1  100.0%        Function: ^Cookie /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/cookie.js:25:46
+      1  100.0%          Function: ^Store.createSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/session/store.js:86:41
+      1  100.0%            Function: ^inflate /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:371:22
+      1    1.9%    Function: ^serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1  100.0%      Function: ^serializeBson /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:379:18
+      1  100.0%        Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1  100.0%          Function: ^toBin /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:345:10
+      1  100.0%            Function: ^writeCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1    1.9%    Function: ^selectServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/topology.js:252:17
+      1  100.0%      Function: ^executeWithServerSelection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:85:36
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%          Function: ^maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%            Function: ^executeOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1    1.9%    Function: ^resolveOptions /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:604:24
+      1  100.0%      Function: ^updateOne /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/collection.js:165:14
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:236:10
+      1  100.0%          t _Builtins_AsyncFunctionAwaitResolveClosure
+      1  100.0%            T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1    1.9%    Function: ^resolve node:path:1091:10
+      1  100.0%      LazyCompile: ~readPackage node:internal/modules/cjs/loader:326:21
+      1  100.0%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:519:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1    1.9%    Function: ^reduceToSingleString node:internal/util/inspect:2007:30
+      1  100.0%      Function: ^formatRaw node:internal/util/inspect:844:19
+      1  100.0%        Function: ^formatValue node:internal/util/inspect:766:21
+      1  100.0%          Function: ^inspect node:internal/util/inspect:310:17
+      1  100.0%            Function: ^formatWithOptionsInternal node:internal/util/inspect:2154:35
+      1    1.9%    Function: ^read /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:739:9
+      1  100.0%      Function: ^processIncomingData /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        Function: ^_write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            LazyCompile: *_write node:internal/streams/writable:286:16
+      1    1.9%    Function: ^onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1  100.0%        LazyCompile: *emit node:events:460:44
+      1  100.0%          Function: ^processIncomingData /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%            Function: ^_write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1    1.9%    Function: ^maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%      Function: ^executeOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1  100.0%        Function: ^_initialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cursor/find_cursor.js:48:16
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cursor/abstract_cursor.js:427:12
+      1  100.0%            Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cursor/abstract_cursor.js:488:14
+      1    1.9%    Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%      Function: ^trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%        LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:485:38
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:203:10
+      1    1.9%    Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/application.js:165:29
+      1  100.0%      Function: ^app /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/express.js:38:21
+      1  100.0%        LazyCompile: *emit node:events:460:44
+      1  100.0%          Function: ^parserOnIncoming node:_http_server:968:26
+      1  100.0%            Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    1.9%    Function: ^getcookie /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:529:19
+      1  100.0%      Function: ^session /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:179:26
+      1  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1    1.9%    Function: ^end node:_http_outgoing:953:45
+      1  100.0%      LazyCompile: *<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:296:10
+      1  100.0%        t _Builtins_AsyncFunctionAwaitResolveClosure
+      1  100.0%          t _Builtins_CallApiCallback
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.9%    Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+      1  100.0%      Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1  100.0%        Function: ^send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1  100.0%          Function: ^json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1    1.9%    Function: ^completeEndSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:138:40
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:133:52
+      1  100.0%        Function: ^maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%          Function: ^endSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:129:15
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:69:70
+      1    1.9%    Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%      Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:102:31
+      1    1.9%    Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:284:23
+      1  100.0%          Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:418:21
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:168:26
+      1    1.9%    Function: ^checkIn /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:175:12
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:286:27
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:213:101
+      1  100.0%          Function: ^handleOperationResult /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:285:42
+      1  100.0%            Function: ^onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1    1.9%    Function: ^applySession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:662:22
+      1  100.0%      Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:284:23
+      1  100.0%            Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:418:21
+      1    1.9%    Function: ^afterWriteTick node:internal/streams/writable:485:24
+      1  100.0%      LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.9%    Function: ^Writable.write node:internal/streams/writable:336:36
+      1  100.0%      LazyCompile: ~value node:internal/console/constructor:272:20
+      1  100.0%        LazyCompile: ~log node:internal/console/constructor:376:6
+      1  100.0%          T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1    1.9%    Function: ^Socket.read node:net:736:33
+      1  100.0%      Function: ^maybeReadMore_ node:internal/streams/readable:621:24
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.9%    Function: ^Readable.push node:internal/streams/readable:233:35
+      1  100.0%      Function: ^writeCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%        Function: ^write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:404:15
+      1  100.0%          Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1    1.9%    Function: ^Long.negate /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/long.js:613:38
+      1  100.0%      Function: ^Long.neg /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/long.js:619:35
+      1  100.0%        Function: ^Long.subtract /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/long.js:720:40
+      1  100.0%          Function: ^Long.sub /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/long.js:726:35
+      1  100.0%            Function: ^Long.compare /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/long.js:291:39
+      1    1.9%    Function: ^FindCursor /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cursor/find_cursor.js:29:16
+      1  100.0%      Function: ^find /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/collection.js:234:9
+      1  100.0%        Function: ^findOne /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/collection.js:217:12
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:203:10
+      1  100.0%            t _Builtins_AsyncFunctionAwaitResolveClosure
+      1    1.9%    Function: ^CommandOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/command.js:14:16
+      1  100.0%      Function: ^UpdateOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/update.js:10:16
+      1  100.0%        Function: ^UpdateOneOperation /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/update.js:69:16
+      1  100.0%          Function: ^updateOne /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/collection.js:165:14
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:296:10
+      1    1.9%    Function: ^<anonymous> node:internal/console/constructor:356:10
+      1  100.0%      Function: ^afterWrite node:internal/streams/writable:490:20
+      1  100.0%        Function: ^afterWriteTick node:internal/streams/writable:485:24
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.9%    Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:357:13
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:69:70
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:171:59
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:286:27
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:213:101
+      1    1.9%    Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:286:27
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:213:101
+      1  100.0%        Function: ^handleOperationResult /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:285:42
+      1  100.0%          Function: ^onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:60:44
+
+     36    2.4%  /usr/lib/system/libsystem_kernel.dylib
+     35   97.2%    LazyCompile: *cpus node:os:141:14
+     35  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+     35  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+     35  100.0%          Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+     35  100.0%            Function: ^compression /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:59:31
+
+     31    2.0%  UNKNOWN
+     16   51.6%    LazyCompile: *cpus node:os:141:14
+     16  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+     16  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+     16  100.0%          Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+     16  100.0%            Function: ^compression /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:59:31
+      1    3.2%    t _Builtins_ObjectPrototypeToString
+      1  100.0%      LazyCompile: *serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%        LazyCompile: *serializeObject /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:260:25
+      1  100.0%          LazyCompile: *serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%            Function: ^serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1    3.2%    t _Builtins_MapPrototypeGet
+      1  100.0%      Function: ^stat node:internal/modules/cjs/loader:158:14
+      1  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:431:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:447:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1    3.2%    t _Builtins_MapPrototypeDelete
+      1  100.0%      Function: ^onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1  100.0%          LazyCompile: *emit node:events:460:44
+      1  100.0%            Function: ^processIncomingData /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    3.2%    t _Builtins_FindOrderedHashMapEntry
+      1  100.0%      t _Builtins_MapPrototypeGet
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    3.2%    LazyCompile: ~patchProcessObject node:internal/process/pre_execution:112:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.2%    LazyCompile: ~parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/node_modules/nopt/lib/nopt.js:242:16
+      1  100.0%      LazyCompile: ~nopt /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/node_modules/nopt/lib/nopt.js:26:15
+      1  100.0%        LazyCompile: ~parseOpts /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    3.2%    LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%        LazyCompile: ~Module.require node:internal/modules/cjs/loader:1053:36
+      1  100.0%          LazyCompile: ~require node:internal/modules/cjs/helpers:102:31
+      1  100.0%            Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:1:1
+      1    3.2%    LazyCompile: ~Readable /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/readable-stream/lib/_stream_readable.js:169:18
+      1  100.0%      LazyCompile: ~Duplex /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/readable-stream/lib/_stream_duplex.js:58:16
+      1  100.0%        LazyCompile: ~Transform /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/readable-stream/lib/_stream_transform.js:98:19
+      1  100.0%          LazyCompile: ~Logger /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/winston/lib/winston/logger.js:40:14
+      1  100.0%            LazyCompile: ~DerivedLogger /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/winston/lib/winston/create-logger.js:43:16
+      1    3.2%    LazyCompile: ~Hmac node:internal/crypto/hash:131:14
+      1  100.0%      LazyCompile: ~createHmac node:crypto:164:20
+      1  100.0%        LazyCompile: ~exports.sign /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/cookie-signature/index.js:16:24
+      1  100.0%          LazyCompile: ~setcookie /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:655:19
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:220:28
+      1    3.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%      LazyCompile: ~prepareHandshakeDocument /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:151:34
+      1  100.0%        LazyCompile: ~performInitialHandshake /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%            LazyCompile: ~callback /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1    3.2%    LazyCompile: *Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:102:31
+      1    3.2%    Function: ^initialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/passport/lib/middleware/initialize.js:51:29
+      1  100.0%      Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:485:38
+      1    3.2%    Function: ^createHash node:crypto:132:20
+      1  100.0%      Function: ^hash /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:596:14
+      1  100.0%        Function: ^isSaved /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:430:21
+      1  100.0%          Function: ^shouldSave /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:440:24
+      1  100.0%            Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+      1    3.2%    Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:189:27
+      1  100.0%      t _Builtins_ArrayMap
+      1  100.0%        LazyCompile: ~CaseInsensitiveMap /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:188:16
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+
+     31    2.0%  /usr/lib/system/libsystem_malloc.dylib
+      1    3.2%    t _Builtins_SetPrototypeHas
+      1  100.0%      LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:431:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:447:23
+      1    3.2%    t _Builtins_KeyedLoadIC_Megamorphic
+      1  100.0%      Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:102:31
+      1  100.0%            Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/collection.js:1:1
+      1    3.2%    LazyCompile: ~slowCases node:internal/util:168:19
+      1  100.0%      Function: ^normalizeEncoding node:internal/util:163:27
+      1  100.0%        Function: ^isEncoding node:buffer:535:40
+      1  100.0%          Function: ^_write node:internal/streams/writable:286:16
+      1  100.0%            Function: ^Writable.write node:internal/streams/writable:336:36
+      1    3.2%    LazyCompile: ~setWriteHeadHeaders /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:105:30
+      1  100.0%      LazyCompile: ~writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%        LazyCompile: ~writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%          LazyCompile: ~_implicitHeader node:_http_server:333:68
+      1  100.0%            LazyCompile: ~end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1    3.2%    LazyCompile: ~setKey /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs-parser/build/index.cjs:750:24
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs-parser/build/index.cjs:724:52
+      1  100.0%        t _Builtins_ArrayForEach
+      1  100.0%          LazyCompile: ~applyDefaultsAndAliases /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs-parser/build/index.cjs:723:41
+      1  100.0%            LazyCompile: ~setConfig /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs-parser/build/index.cjs:617:27
+      1    3.2%    LazyCompile: ~receiveResponse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/stream_description.js:31:20
+      1  100.0%      LazyCompile: ~set hello /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:78:14
+      1  100.0%        t _Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%            LazyCompile: ~onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1    3.2%    LazyCompile: ~parseHostName /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%      Function: ^URLStateMachine /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%        LazyCompile: ~module.exports.basicURLParse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%          LazyCompile: ~URLImpl /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1  100.0%            LazyCompile: ~exports.setup /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/whatwg-url/lib/URL.js:49:17
+      1    3.2%    LazyCompile: ~onParseComplete node:internal/url:545:25
+      1  100.0%      T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1  100.0%        LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%          LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%            LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:396:36
+      1    3.2%    LazyCompile: ~makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1  100.0%      LazyCompile: ~toBin /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:345:10
+      1  100.0%        LazyCompile: ~writeCommand /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%          LazyCompile: ~write /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:404:15
+      1  100.0%            LazyCompile: ~command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1    3.2%    LazyCompile: ~log node:internal/console/constructor:376:6
+      1  100.0%      T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1  100.0%          Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+      1    3.2%    LazyCompile: ~introduce /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@dabh/diagnostics/diagnostics.js:134:19
+      1  100.0%      LazyCompile: ~nope /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@dabh/diagnostics/diagnostics.js:152:14
+      1  100.0%        LazyCompile: ~dev /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@dabh/diagnostics/node/development.js:12:38
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/winston/lib/winston/rejection-handler.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    3.2%    LazyCompile: ~free node:internal/freelist:21:7
+      1  100.0%      LazyCompile: ~freeParser node:_http_common:180:20
+      1  100.0%        LazyCompile: ~socketOnClose node:_http_server:738:23
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~<anonymous> node:net:311:24
+      1    3.2%    LazyCompile: ~createIndex /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/collection.js:253:16
+      1  100.0%      LazyCompile: ~setAutoRemove /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1  100.0%          T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1  100.0%            Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    3.2%    LazyCompile: ~Collection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/collection.js:66:16
+      1  100.0%      LazyCompile: ~collection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/db.js:192:15
+      1  100.0%        LazyCompile: ~NativeCollection.onOpen /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:45:45
+      1  100.0%          LazyCompile: ~Connection.onOpen /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/connection.js:636:39
+      1  100.0%            LazyCompile: ~_setClient /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/connection.js:858:20
+      1    3.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/update.js:76:40
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:286:27
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:213:101
+      1  100.0%          LazyCompile: ~handleOperationResult /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:285:42
+      1  100.0%            Function: ^onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1    3.2%    LazyCompile: *cpus node:os:141:14
+      1  100.0%      Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1  100.0%        Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+      1  100.0%            Function: ^compression /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:59:31
+      1    3.2%    LazyCompile: *FastBuffer node:internal/buffer:958:14
+      1  100.0%      Function: ^alloc node:buffer:365:30
+      1  100.0%        Function: ^serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1  100.0%          Function: ^serializeBson /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:379:18
+      1  100.0%            Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1    3.2%    Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/statuses/index.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1    3.2%    Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/promise_provider.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+
+     31    2.0%  /usr/lib/system/libsystem_c.dylib
+      2    6.5%    t _Builtins_ArrayPrototypePush
+      2  100.0%      Function: ^cpus node:os:141:14
+      2  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      2  100.0%          Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/route.js:116:16
+      1    3.2%    t _Builtins_StringPrototypeToLowerCaseIntl
+      1  100.0%      Function: ^parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/content-type/index.js:106:16
+      1  100.0%        Function: ^setCharset /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/utils.js:248:41
+      1  100.0%          Function: ^send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1  100.0%            Function: ^json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1    3.2%    t _Builtins_FunctionPrototypeHasInstance
+      1  100.0%      Function: ^getReadPreference /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/wire_protocol/shared.js:8:27
+      1  100.0%        Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%            LazyCompile: *processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:418:21
+      1    3.2%    LazyCompile: ~uuidV4 /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/utils.js:385:16
+      1  100.0%      LazyCompile: ~ServerSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sessions.js:541:16
+      1  100.0%        LazyCompile: ~acquire /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sessions.js:597:12
+      1  100.0%          LazyCompile: ~get serverSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sessions.js:85:22
+      1  100.0%            LazyCompile: ~applySession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sessions.js:661:22
+      1    3.2%    LazyCompile: ~setcookie /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:655:19
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:220:28
+      1  100.0%        LazyCompile: ~writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%          LazyCompile: ~writeHead /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~_implicitHeader node:_http_server:333:68
+      1    3.2%    LazyCompile: ~session /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:179:26
+      1  100.0%      LazyCompile: ~handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~trim_prefix /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            LazyCompile: ~process_params /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:338:47
+      1    3.2%    LazyCompile: ~serializeNumber /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:44:25
+      1  100.0%      Function: ^serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%        Function: ^serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1  100.0%          Function: ^serializeBson /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:379:18
+      1  100.0%            Function: ^makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1    3.2%    LazyCompile: ~serializeInto /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%      LazyCompile: ~serialize /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bson/lib/bson.js:110:19
+      1  100.0%        LazyCompile: ~serializeBson /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:379:18
+      1  100.0%          LazyCompile: ~makeDocumentSegment /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:371:24
+      1  100.0%            LazyCompile: ~toBin /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:345:10
+      1    3.2%    LazyCompile: ~read /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1  100.0%      Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/saslprep/lib/memory-code-points.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1    3.2%    LazyCompile: ~patchProcessObject node:internal/process/pre_execution:112:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.2%    LazyCompile: ~maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%      LazyCompile: ~endSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:129:15
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/execute_operation.js:69:70
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/indexes.js:131:40
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/operations/indexes.js:114:52
+      1    3.2%    LazyCompile: ~initAsyncResource node:internal/timers:154:27
+      1  100.0%      LazyCompile: ~Timeout node:internal/timers:164:14
+      1  100.0%        LazyCompile: ~setInterval node:timers:210:21
+      1  100.0%          LazyCompile: ~setupConnectionsTracking node:_http_server:478:34
+      1  100.0%            LazyCompile: ~Server node:_http_server:488:16
+      1    3.2%    LazyCompile: ~format /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/content-type/index.js:65:17
+      1  100.0%      LazyCompile: ~setCharset /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/utils.js:248:41
+      1  100.0%        LazyCompile: ~send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1    3.2%    LazyCompile: ~end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+      1  100.0%      LazyCompile: ~end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/compression/index.js:92:28
+      1  100.0%        LazyCompile: ~send /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1    3.2%    LazyCompile: ~createHash node:crypto:132:20
+      1  100.0%      LazyCompile: ~hash /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:596:14
+      1  100.0%        LazyCompile: ~generate /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:363:22
+      1  100.0%          LazyCompile: ~session /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:179:26
+      1  100.0%            LazyCompile: ~handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1    3.2%    LazyCompile: ~configure /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/safe-stable-stringify/index.js:213:20
+      1  100.0%      Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/safe-stable-stringify/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1    3.2%    LazyCompile: ~checkServer /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/sdam/monitor.js:229:12
+      1  100.0%        LazyCompile: ~executeAndReschedule /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/utils.js:649:34
+      1  100.0%          LazyCompile: ~listOnTimeout node:internal/timers:512:25
+      1  100.0%            LazyCompile: ~processTimers node:internal/timers:492:25
+      1    3.2%    LazyCompile: ~add /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/schema.js:553:36
+      1  100.0%      LazyCompile: ~Schema /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/schema.js:96:16
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/user.schema.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    3.2%    LazyCompile: ~MongoClient /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:63:16
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/connection.js:798:31
+      1  100.0%        t _Builtins_PromiseConstructor
+      1  100.0%          LazyCompile: ~Connection.openUri /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/connection.js:680:40
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/index.js:380:49
+      1    3.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:48230
+      1  100.0%      LazyCompile: ~parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:39721
+      1  100.0%        LazyCompile: ~get /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:61383
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1    3.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:1155
+      1  100.0%      t _Builtins_ArrayForEach
+      1  100.0%        LazyCompile: ~o /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:937
+      1  100.0%          LazyCompile: ~h /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:1448
+      1  100.0%            LazyCompile: ~boolean /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:30346
+      1    3.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/connection.js:567:18
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/model.js:1445:52
+      1  100.0%        LazyCompile: ~promiseOrCallback /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1  100.0%          LazyCompile: ~Mongoose._promiseOrCallback /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/index.js:1233:49
+      1  100.0%            LazyCompile: ~createCollection /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/lib/model.js:1396:51
+      1    3.2%    LazyCompile: *emit node:events:460:44
+      1  100.0%      Function: ^onFinish node:_http_outgoing:948:18
+      1  100.0%        Function: ^callback node:internal/streams/writable:553:44
+      1  100.0%          Function: ^afterWrite node:internal/streams/writable:490:20
+      1  100.0%            Function: ^afterWriteTick node:internal/streams/writable:485:24
+      1    3.2%    LazyCompile: *FastBuffer node:internal/buffer:958:14
+      1  100.0%      Function: ^fromArrayBuffer node:buffer:454:25
+      1  100.0%        Function: ^from node:buffer:301:28
+      1  100.0%          Function: ^clone /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:564:17
+      1  100.0%            Function: ^completeEndSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:138:40
+      1    3.2%    Function: ^setHeader node:_http_outgoing:642:57
+      1  100.0%      Function: ^header /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:777:29
+      1  100.0%        Function: ^json /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/response.js:250:25
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:231:34
+      1  100.0%            Function: ^handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/layer.js:86:49
+      1    3.2%    Function: ^onStreamRead node:internal/stream_base_commons:167:22
+      1    3.2%    Function: ^createHash node:crypto:132:20
+      1  100.0%      Function: ^hash /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:596:14
+      1  100.0%        Function: ^isSaved /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:430:21
+      1  100.0%          Function: ^shouldSave /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:440:24
+      1  100.0%            Function: ^end /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:250:27
+
+     24    1.6%  T __kernelrpc_mach_port_get_refs
+      2    8.3%    Function: ^<anonymous> node:internal/validators:401:42
+      2  100.0%      Function: ^compileFunction node:vm:316:25
+      2  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    4.2%    t _Builtins_StringPrototypeReplace
+      1  100.0%      LazyCompile: ~toString /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/uid-safe/index.js:102:19
+      1  100.0%        LazyCompile: ~uidSync /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/uid-safe/index.js:75:18
+      1  100.0%          LazyCompile: ~generateSessionId /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:518:27
+      1  100.0%            LazyCompile: ~store.generate /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express-session/index.js:158:28
+      1    4.2%    t _Builtins_RegExpPrototypeTest
+      1  100.0%      LazyCompile: ~parse /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/node_modules/semver/functions/parse.js:6:15
+      1  100.0%        LazyCompile: ~get_node_abi /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:56:22
+      1  100.0%          LazyCompile: ~get_runtime_abi /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:76:25
+      1  100.0%            LazyCompile: ~module.exports.evaluate /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      1    4.2%    t _Builtins_ReflectGet
+      1  100.0%      Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%        Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1  100.0%            T v8impl::Reference::New(napi_env__*, v8::Local<v8::Value>, unsigned int, bool, void (*)(napi_env__*, void*, void*), void*, void*)
+      1    4.2%    LazyCompile: ~validate_config /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%      LazyCompile: ~exports.find /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    4.2%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%    LazyCompile: ~singletonify /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/index.cjs:39:22
+      1  100.0%      LazyCompile: ~Argv /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/index.cjs:11:14
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/index.cjs:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    4.2%    LazyCompile: ~parseurl /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/parseurl/index.js:35:19
+      1  100.0%      LazyCompile: ~getPathname /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:537:21
+      1  100.0%        LazyCompile: ~next /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          LazyCompile: ~handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/router/index.js:136:31
+      1  100.0%            LazyCompile: ~handle /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/application.js:165:29
+      1    4.2%    LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1  100.0%      Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/yargs/build/index.cjs:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1025:33
+      1    4.2%    LazyCompile: ~enable /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mquery/node_modules/debug/src/common.js:162:17
+      1  100.0%      LazyCompile: ~setup /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mquery/node_modules/debug/src/common.js:7:15
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mquery/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    4.2%    LazyCompile: ~createDebug /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/node_modules/debug/src/common.js:60:22
+      1  100.0%      Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/connect-mongo/build/main/lib/MongoStore.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1    4.2%    LazyCompile: ~clone /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:564:17
+      1  100.0%      LazyCompile: ~completeEndSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:138:40
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:133:52
+      1  100.0%          Function: ^maybePromise /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/utils.js:344:22
+      1  100.0%            LazyCompile: ~endSession /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sessions.js:129:15
+      1    4.2%    LazyCompile: ~callback /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%      LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%        LazyCompile: ~onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1  100.0%            Function: ^emit node:events:460:44
+      1    4.2%    LazyCompile: ~app.<computed> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/express/lib/application.js:490:25
+      1  100.0%      Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/server.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1025:33
+      1    4.2%    LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:345:48
+      1  100.0%      LazyCompile: ~callback /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%          LazyCompile: ~onMessage /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1    4.2%    LazyCompile: *writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:532:21
+      1  100.0%        Function: ^Writable.uncork node:internal/streams/writable:344:37
+      1  100.0%          Function: ^connectionCorkNT node:_http_outgoing:897:26
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    4.2%    Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%    Function: ~<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/color/index.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1    4.2%    Function: ^Msg /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/commands.js:317:16
+      1  100.0%      Function: ^command /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%        Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%          Function: ^<anonymous> /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:284:23
+      1  100.0%            Function: ^processWaitQueue /Volumes/Datos/CoderHouse/Backend/Modulo2/32-profilling-y-debug/desafio-entregable/node_modules/mongodb/lib/cmap/connection_pool.js:418:21
+
