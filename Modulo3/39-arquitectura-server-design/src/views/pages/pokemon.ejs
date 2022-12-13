@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+</head>
+<body>
+    <h1>Pokemons in system</h1>
+
+    <main class="container py-5">
+        <div class="row gap-4">
+            <% for (pokemon of pokemons) { %> 
+                <%- include("../partials/card") %>
+            <% } %> 
+        </div> <!-- // .row -->
+    </main>
+</body>
+</html>
