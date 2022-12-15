@@ -72,6 +72,6 @@ Si usamos Bash:
 * La ventaja principal sobre el módulo forever es el tema del cluster embebido en este módulo, como mencionamos antes.
 
 ## Empezar a usarlo
-`npm i pm2`
-`pm2 start app.js`
-`pm2 list`
+* `npm i pm2`
+* `pm2 start app.js`
+* `pm2 list`

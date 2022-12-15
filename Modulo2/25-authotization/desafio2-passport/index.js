@@ -2,7 +2,7 @@
 Server Setup
 ========================================== */
 const express = require("express");
-const PORT = 8080;
+const PORT = 8081;
 
 const app = express();
 app.use(express.urlencoded({extended:true}))
@@ -34,7 +34,10 @@ app.use(session({
     }),
     secret: "aKiS8mt3zF5nLQUbtav4",
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60
+    }
 }))
 
 
@@ -50,39 +53,56 @@ const {Types} = require("mongoose")
 
 // Compare if the username and password provided match with a user in the MongoDB
 passport.use("login", new LocalStrategy(async(username, password, done) => {
-    const user = await User.findOne({username})
-    console.log(`user: ${user}`)
-    if (!user){
-        return done()
+
+    try {
+        const user = await User.findOne({username})
+        console.log(`user: ${user}`)
+
+        if (!user || !comparePassword(password, user.password)){
+            return done(null, false, {message: "User doesn't exist or password doesn't match"})
+        } 
+        
+        return done(null, user)
+/*
+        
+
+        if (user && !comparePassword(password, passHash) ){
+            return done()
+        }
+*/
+        
+    } catch (error) {
+        return done(error)
+        
     }
-
-    const passHash = user.password;
-
-    if (user && !comparePassword(password, passHash) ){
-        return done()
-    }
-
-
-    return done(null,user)
+    
 }))
 
 // Checks if the username exists in the MongoDB, if so, throws an error, otherwise, creates a new user
-passport.use("signup", new LocalStrategy({
-    passReqToCallback: true
-}, async(req, username, password, done) => {
-    const user = await User.findOne({username});
-    if(user) {
-        return done()
+ 
+passport.use("signup", new LocalStrategy(
+    {passReqToCallback: true},
+    async (req, username, password, done) => {
+        const user = await User.findOne({username});
+        if(user) {
+            return done(null, false, {message: "User already exists"} )
+        }
+        const {address} = req.body
+        const hashedPassword = hashPassword(password)
+        console.log({hashedPassword})
+        const newUser = new User({
+            username,
+            password: hashedPassword,
+            address
+        })
+        await newUser.save()
+        return done(null, newUser)
     }
-    const {address} = req.body
-    const hashedPassword = hashPassword(password)
-    const newUser = new User({username, password: hashedPassword, address})
-    await newUser.save()
-    return done(null, newUser)
-}))
+))
 
+// Seralize is done to do searches
 passport.serializeUser((user,done) => {
-    done(null, user.id)
+    done(null, user._id)
 })
 
 passport.deserializeUser(async (id,done) => {
@@ -90,7 +110,6 @@ passport.deserializeUser(async (id,done) => {
     const user = await User.findById(id)
     done(null, user)
 })
-
 
 app.use(passport.initialize())
 app.use(passport.session())
@@ -116,7 +135,7 @@ app.post("/signup", passport.authenticate("signup", {
     failureRedirect: "/error",
     failureMessage: "User already exists",
 }), (req,res) => {
-    req.session.user = req.user
+    // req.session.user = req.user
     res.redirect("/profile")
 })
 
@@ -131,6 +150,7 @@ app.post("/login", passport.authenticate("login", {
     failureMessage: "Invalid username or password",
 }), (req,res) => {
     req.session.user = req.user
+    console.log(req.session.user)
     res.redirect("/profile")
 })
 
@@ -146,8 +166,14 @@ app.get("/profile", isLoggedOut, (req,res) => {
         req.session.counter++
     }
     res.render("profile" , {
-        user: req.session.user,
-        counter: req.session.counter
+        user: req.user,
+        counter: req.session.counter,
+        //user2: Object.keys(req.session) //-> cookie, passport, counter
+        // user2: Object.keys(req.session.passport)
+        // user2: req.session.passport.user
+        // user2: Object.keys(req.session.cookie)
+        // user2: Object.keys(req)
+        // user2: req.user
     })
 })
 

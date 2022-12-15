@@ -19,3 +19,27 @@ En resumen, La **autenticación** verifica las identidades, por diferentes méto
 
 * **JWT(JSON Web Token):** Este método open source permite la transmisión segura de datos entre las distintas partes. Comúnmente se utiliza para la autorización a partir de un par de claves que contiene una clave privada y una pública. 
 * **OAuth 2.0:** Permite que mediante una API, el usuario se autentique y acceda a los recursos del sistema que necesita.
+
+# Passport
+* Passport es un middleware de autenticación de NodeJS.
+* Cumple únicamente la función de autenticar solicitudes, por lo que delega todas las demás funciones a la aplicación. Esto mantiene el código limpio y fácil de mantener.
+* Passport reconoce los distintos métodos de login utilizados actualmente, por lo que sus mecanismos de autenticación se empaquetan como módulos individuales. Entonces, no es necesario crear dependencias que no se vayan a utilizar.
+* Cada uno de estos mecanismos se llaman strategies.
+
+
+* Cada strategy tiene un módulo distinto de NodeJS para instalar.
+* Las strategy disponibles son:
+  * passport-local para autenticación de usuarios mediante nombre de usuario y contraseña.
+  * passport-openid para autenticación mediante OpenId (estándar abierto para la autenticación federada).
+  * passport-oauth para autenticación mediante API de otros proveedores como de redes sociales.
+
+
+## Passport local
+1h:32
+1. `npm i passport passport-local`
+2. Requerimos `passport` y el modulo `Strategy` de `passport-local`:
+```
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+```
+3.

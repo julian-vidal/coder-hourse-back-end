@@ -40,8 +40,8 @@
 * Se usa para solucionar el problema que se genera al correr nuestra app Node en el puerto 80, para que sea accesible desde una IP o dominio, y queremos utilizar el mismo puerto con otro proceso.
 
 Rutas importantes:
-/opt/homebrew/etc/nginx/nginx.conf -> Ruta de configuraciones para nginx
-/opt/homebrew/Cellar/nginx/1.23.1 -> ruta de instalación de nginx
+* */opt/homebrew/etc/nginx/nginx.conf* -> Ruta de configuraciones para nginx
+* */opt/homebrew/Cellar/nginx/1.23.1* -> ruta de instalación de nginx
 
 
 ## Install and initial setup NGINX

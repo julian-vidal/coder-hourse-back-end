@@ -15,9 +15,9 @@ server.listen(port, () => {
     console.log(`Server listening in the port ${port}. PID: ${process.pid}`)
 })
 
-// forever start server.js 8081
+// forever start server.js <PORT>
 // forever start server.js 8082
 // forever start server.js 8083
 // forever list
-// forever stop 12145
+// forever stop <PID>
 // forever stopall

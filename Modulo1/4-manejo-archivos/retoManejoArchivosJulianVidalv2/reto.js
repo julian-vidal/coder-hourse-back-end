@@ -100,11 +100,21 @@ class Contenedor {
 
 const products = new Contenedor('productos.txt');
 
-// products.save({
-//   tittle: "Shirt",
-//   price: 30,
-//   thumbnail: "https://via.placeholder.com/50"
-// })
+
+products.save({
+  tittle: "Shirt",
+  price: 30,
+  thumbnail: "https://via.placeholder.com/50"
+},{
+  tittle: "Shirt2",
+  price: 32,
+  thumbnail: "https://via.placeholder.com/50"
+},{
+  tittle: "Shirt3",
+  price: 33,
+  thumbnail: "https://via.placeholder.com/50"
+},
+)
 
 
 // products.getAll();

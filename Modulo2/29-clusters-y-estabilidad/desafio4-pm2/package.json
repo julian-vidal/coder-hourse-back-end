@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "pm2": "^5.2.0"
+    "pm2": "^5.2.2"
   },
   "scripts": {
     "start": "node server.js"
@@ -8,7 +8,6 @@
   "name": "desafio4-pm2",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
