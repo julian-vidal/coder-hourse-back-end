@@ -25,3 +25,31 @@ Es un proceso aisalado de la autenticacion
 
 ## Install
 1. `npm i jsonwebtoken`
+
+La constante PRIVATE_KEY puede tener cualquier string. Se usa para encriptar y desencriptar los datos.
+```
+const jwt = require("jsonwebtoken");
+const PRIVATE_KEY = <KEY_HERE>;
+```
+
+
+* La función **generateToken** recibe como parámetro un usuario (string) y devuelve el token. En otras palabras, inicia sesión.
+* Se utiliza el método **jwt.sign**.
+* El tercer parámetro es el tiempo hasta que expire ese token, es decir, el tiempo que la sesión va a permanecer iniciada como máximo.
+
+```
+function generateToken(user) {
+  const token = jwt.sign(
+   { data: user },
+   PRIVATE_KEY,
+   { expiresIn: '24h' }
+   );
+  return token;
+}
+```
+
+Para verificar que un token es valido:
+
+```
+const verified = jwt.verify(token, PRIVATE_KEY);
+```

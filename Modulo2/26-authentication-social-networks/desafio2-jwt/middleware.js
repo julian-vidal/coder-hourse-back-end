@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken")
-const dotenv = require("dotenv")
-dotenv.config()
+require("dotenv").config()
 
 const SECRET = process.env.SECRET
 
@@ -15,6 +14,7 @@ module.exports = function validateJWT(req,res, next) {
 
     try {
         const validate = jwt.verify(token, SECRET);
+        console.log({validate})
         next();
     } catch (err) {
         return res.status(401).send("Not authorized")

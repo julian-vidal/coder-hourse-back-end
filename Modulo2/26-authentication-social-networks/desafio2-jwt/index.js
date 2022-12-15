@@ -1,5 +1,5 @@
 const express = require("express")
-const dotenv = require("dotenv")
+require("dotenv").config()
 const jwt = require("jsonwebtoken")
 
 const validateJWT = require("./middleware")
@@ -7,11 +7,10 @@ const validateJWT = require("./middleware")
 const PORT = 8000
 const app = express()
 
-dotenv.config()
-const SECRET = process.env.SECRET
+const {SECRET} = process.env
 
 const users = [
-    {email: "user1", password: "user1"}
+    {email: "user1@test.com", password: "user1"}
 ]
 
 app.use(express.json())
@@ -31,16 +30,28 @@ app.post("/login", (req,res) => {
     if(!user || user?.password !== password) {
         res.status(401).send("Invalid ")
     }
+
+    const token = jwt.sign({
+        data: {
+            email: user.email,
+            typeUser: "admin"
+        }
+    }, SECRET,
+    {expiresIn: "1d"})
+
+    res.send({
+        user: {
+            email: user.email,
+            typeUser: "admin"
+        },
+        token
+    })
 })
 
-const token = jwt.sign({
-    data: {
-        email: user.email
-    }, SECRET
+
+app.get("/", validateJWT, (req,res) => {
+    res.sendFile(__dirname + "/public/index.html")
 })
-
-
-app.get("/", )
 
 
 app.listen(PORT, () => {
