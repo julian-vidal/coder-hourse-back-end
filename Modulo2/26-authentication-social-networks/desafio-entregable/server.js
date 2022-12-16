@@ -3,7 +3,7 @@ Server Setup
 ========================================== */
 const express = require("express");
 const app = express();
-const PORT = 8080;
+const PORT = 8081;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.listen(PORT, () => {
@@ -83,7 +83,6 @@ passport.use("signup", new LocalStrategy(
         }
 
         const hashedPassword = hashPassword(password)
-        console.log(hashedPassword);
         const newUser = new User ({
             email,
             password: hashedPassword
@@ -153,7 +152,7 @@ User Routes
 // Signup 
 app.post("/signup", passport.authenticate("signup", {
     failureRedirect: "/error",
-    // failureMessage: "User already exists!!!",
+    failureMessage: "User already exists!",
     usernameField: "email",
     passwordField: "password"
 }), (req,res) => {
