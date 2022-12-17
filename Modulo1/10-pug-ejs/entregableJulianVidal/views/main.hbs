@@ -1,0 +1,17 @@
+<h1>Add a new product</h1>
+
+<form action="/productos" method="post">
+    <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Name" required>
+    </div>
+
+    <div class="mb-3">
+        <input type="number" name="price" class="form-control" placeholder="Price" required >
+    </div>
+    
+    <div class="mb-3">
+        <input type="url" name="picture" placeholder="URL of the picture" class="form-control" required>
+    </div>
+    
+    <input type="submit" value="Add product" class="btn btn-primary">
+</form>
