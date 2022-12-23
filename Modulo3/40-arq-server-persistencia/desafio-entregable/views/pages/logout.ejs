@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <title>Logout</title>
+    </head>
+
+    <body>
+        <script>
+            setTimeout(() =>  {
+                location.replace("../")
+            }, 2000)
+        </script>
+
+        <main  class="container pt-5">
+            <div class="row mb-4">
+                <div class="col">   
+                    <div class="alert alert-info" role="alert">
+                        <h1>
+                            👋 See you soon, <%= name %>
+                        </h1>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div> <!-- Login Form -->
+
+        </main>
+
+    </body>
+
+    
+
+</html>
