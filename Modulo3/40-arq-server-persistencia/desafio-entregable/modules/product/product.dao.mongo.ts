@@ -1,5 +1,4 @@
 import {model, Schema} from "mongoose"
-import { MongoConnection } from "../../database"
 import {DAOInterface} from "../dao.interface"
 import { ProductDTO } from "./product.dto"
 
@@ -17,7 +16,6 @@ const ProductModel = model("Product", ProductSchema);
 export class ProductDAOMongoImpl implements DAOInterface<ProductDTO, number>{
     private productModel;
     constructor(){
-        MongoConnection.connect();
         this.productModel = ProductModel
     }
 
