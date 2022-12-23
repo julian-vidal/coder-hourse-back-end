@@ -3,7 +3,6 @@ import yargs from "yargs/yargs"
 
 
 export const {MONGO_URI} = process.env
-export const {SECRET} = process.env
 
 const argv = yargs(process.argv.slice(2)).options({
     p: {type: "number", default: 8080, alias: "PORT"},
