@@ -12,40 +12,38 @@ const form = `
 </form> 
 `
 
-// let list =["red", "blue", "black"]
-let list: string[] =[]
+const list: string[] =[]
 
-// list.map(color => console.log(color))
-
-const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello</h1>
-  ${form}
-  <hr>
-  <ul>
-  ${list.map(color => `<li>${color}</li>`).join("")}
-  </ul>
-</body>
-</html>`
+const html = () => {
+  return `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    ${form}
+    <hr>
+    <ul>
+    ${list.map(color => `<li style="color:${color}">${color}</li>`).join("")}
+    </ul>
+  </body>
+  </html>`
+} 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 app.get("/", (_req: Request,res:Response) => {
-  console.log(list);
-  return res.send(html)
+  return res.send(html())
 })
 
 app.post("/", (req: Request,res: Response)=> {
   list.push(req.body.color)
-  res.json({list})
+  res.redirect("/")
 
 })
 
